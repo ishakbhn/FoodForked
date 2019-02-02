@@ -1,0 +1,383 @@
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (272.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (218.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (673.3ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (450.5ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171135"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMeals (20190202171537)
+  [1m[35m (31.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171537_create_meals.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171537"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFoods (20190202171543)
+  [1m[35m (40.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "calories" integer, "cuisine" character varying, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171543_create_foods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171543"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePlans (20190202171550)
+  [1m[35m (39.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "meal_id" bigint, "breakfast_id" bigint, "lunch_id" bigint, "dinner_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0c9cb82ffe"
+FOREIGN KEY ("meal_id")
+  REFERENCES "meals" ("id")
+, CONSTRAINT "fk_rails_b82d7020d6"
+FOREIGN KEY ("breakfast_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_5af46a4930"
+FOREIGN KEY ("lunch_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_cf9a4b7ad8"
+FOREIGN KEY ("dinner_id")
+  REFERENCES "foods" ("id")
+)[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_meal_id" ON "plans"  ("meal_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_breakfast_id" ON "plans"  ("breakfast_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_lunch_id" ON "plans"  ("lunch_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_dinner_id" ON "plans"  ("dinner_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171550"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-02 17:18:46.712563"], ["updated_at", "2019-02-02 17:18:46.712563"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:19:06 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (45.0ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 1057ms (Views: 982.1ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:19:34 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (44.7ms)
+  Rendered plans/new.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 155ms (Views: 113.9ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:19:39 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/GAmkAjcivxRDmLGc/HpvT8Mf4iH1FE8ztkQyxK+NNc+PTzKKgHSu8Nl2el42MYcTn2Biln7gZTGoSyCqyPaA==", "plan"=>{"meal_id"=>"", "breakfast_id"=>"12", "lunch_id"=>"12", "dinner_id"=>"12"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.6ms)
+  Rendered plans/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 64ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:19:50 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"drnZacV1zZml4SyBzF6gdBwCSst7rHJsQW2v9AhgytvVR7ZBbyXi0qjnBFq4ISj5MpFz9ZqzeB3WLBL4RnMWQA==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"2", "lunch_id"=>"12", "dinner_id"=>"12"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (2.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (4.0ms)
+  Rendered plans/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 34.8ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:20:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:20:05 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.0ms)
+  Rendered plans/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:20:09 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKbJUap2/wRB4flWOaU0dT9JhUMBL+WUw2+7S7dZqNPzr704wv2KZV+oV7qFiZDLuoxCuwpXWtZjTlu6kb/faA==", "plan"=>{"meal_id"=>"1", "food_id"=>"1"}, "commit"=>"Create Plan"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'food_id' for Plan.):
+  
+app/controllers/plans_controller.rb:27:in `create'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:21:07 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.0ms)
+  Rendered plans/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:21:12 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9t1SHDQPWnDy4pCsJcKi+B7T934LMmqtAJP+VpCnNP5VIz00nl91O//kuHdRvSp1MEDOQOotYNyX0kNa3rToZQ==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.9ms)
+  Rendered plans/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:22:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:22:52 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.2ms)
+  Rendered plans/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 82ms (Views: 57.0ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:22:56 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DuhmDOBCY1VfkxZjWu5fFde8U7cjmCifd0SnNaqpV8V14RJliMkWNEHauI/mwvurUnmUTyjgl93XZUfEjE8gfg==", "plan"=>{"meal_id"=>"6", "breakfast_id"=>"6", "lunch_id"=>"6", "dinner_id"=>"6"}, "commit"=>"Create Plan"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.9ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.2ms)
+  Rendered plans/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 59ms (Views: 31.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:23:26 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 46.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:23:27 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.5ms)
+  Rendered plans/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 117ms (Views: 41.0ms | ActiveRecord: 59.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:23:31 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLYbo7frngr3F543wG5LWTTnHEKtAN+lwzlxhIgSYURLv2/K32Dra+leMNt8Qu/nsSLbuqZ4YOdjGJF1rvQW/w==", "plan"=>{"meal_id"=>"4", "breakfast_id"=>"4", "lunch_id"=>"4", "dinner_id"=>"4"}, "commit"=>"Create Plan"}
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.2ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (271.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (222.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (595.3ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (431.8ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171135"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMeals (20190202171537)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171537_create_meals.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171537"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFoods (20190202171543)
+  [1m[35m (27.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "calories" integer, "cuisine" character varying, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171543_create_foods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171543"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePlans (20190202171550)
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "meal_id" bigint, "breakfast_id" bigint, "lunch_id" bigint, "dinner_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0c9cb82ffe"
+FOREIGN KEY ("meal_id")
+  REFERENCES "meals" ("id")
+, CONSTRAINT "fk_rails_b82d7020d6"
+FOREIGN KEY ("breakfast_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_5af46a4930"
+FOREIGN KEY ("lunch_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_cf9a4b7ad8"
+FOREIGN KEY ("dinner_id")
+  REFERENCES "foods" ("id")
+)[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_meal_id" ON "plans"  ("meal_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_breakfast_id" ON "plans"  ("breakfast_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_lunch_id" ON "plans"  ("lunch_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_dinner_id" ON "plans"  ("dinner_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171550"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-02 17:24:17.473810"], ["updated_at", "2019-02-02 17:24:17.473810"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
