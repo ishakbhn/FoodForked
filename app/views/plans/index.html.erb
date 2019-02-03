@@ -17,9 +17,15 @@
     <% @plans.each do |plan| %>
       <tr>
         <td><%= plan.meal %></td>
+<<<<<<< HEAD
         <td><%= plan.breakfast_id %></td>
         <td><%= plan.lunch_id %></td>
         <td><%= plan.dinner_id %></td>
+=======
+        <td><%= plan.food %></td>
+        <td><%= plan.food %></td>
+        <td><%= plan.food %></td>
+>>>>>>> master
         <td><%= link_to 'Show', plan %></td>
         <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
         <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
