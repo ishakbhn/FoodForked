@@ -1,6 +1,6 @@
 class Plan < ApplicationRecord
-  belongs_to :meal
-  belongs_to :food
-  belongs_to :food
-  belongs_to :food
+  has_and_belongs_to_many :meal
+  has_and_belongs_to_many :breakfast
+  has_and_belongs_to_many :lunch
+  has_and_belongs_to_many :dinner
 end

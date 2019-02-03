@@ -1,7 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
+  date: 2019-02-03 01:15:37
+
+two:
+  date: 2019-02-03 01:15:37
+=======
   date: 2019-02-02 22:53:48
 
 two:
   date: 2019-02-02 22:53:48
+>>>>>>> master

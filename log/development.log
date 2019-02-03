@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
 Started GET "/" for 127.0.0.1 at 2019-02-02 22:41:11 +0800
   
 ActiveRecord::NoDatabaseError (FATAL:  database "Project-3_development" does not exist
@@ -193,6 +217,7 @@ FOREIGN KEY ("food_id")
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> master
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   ↳ bin/rails:9
@@ -200,6 +225,59 @@ FOREIGN KEY ("food_id")
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
   ↳ bin/rails:9
+<<<<<<< HEAD
+  [1m[35m (272.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (218.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (673.3ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (450.5ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171135"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMeals (20190202171537)
+  [1m[35m (31.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171537_create_meals.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171537"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFoods (20190202171543)
+  [1m[35m (40.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "calories" integer, "cuisine" character varying, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171543_create_foods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171543"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePlans (20190202171550)
+  [1m[35m (39.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "meal_id" bigint, "breakfast_id" bigint, "lunch_id" bigint, "dinner_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0c9cb82ffe"
+=======
   [1m[35m (239.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
   ↳ bin/rails:9
   [1m[35m (219.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
@@ -543,6 +621,7 @@ Migrating to CreatePlans (20190202150526)
   [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
   ↳ bin/rails:9
   [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "meal_id" bigint, "breakfast_id" bigint, "lunch_id" bigint, "dinner_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0c9cb82ffe"
+>>>>>>> master
 FOREIGN KEY ("meal_id")
   REFERENCES "meals" ("id")
 , CONSTRAINT "fk_rails_b82d7020d6"
@@ -555,6 +634,582 @@ FOREIGN KEY ("lunch_id")
 FOREIGN KEY ("dinner_id")
   REFERENCES "foods" ("id")
 )[0m
+<<<<<<< HEAD
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_meal_id" ON "plans"  ("meal_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_breakfast_id" ON "plans"  ("breakfast_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_lunch_id" ON "plans"  ("lunch_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_dinner_id" ON "plans"  ("dinner_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171550"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-02 17:18:46.712563"], ["updated_at", "2019-02-02 17:18:46.712563"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:19:06 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (45.0ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 1057ms (Views: 982.1ms | ActiveRecord: 47.3ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:19:34 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (44.7ms)
+  Rendered plans/new.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 155ms (Views: 113.9ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:19:39 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/GAmkAjcivxRDmLGc/HpvT8Mf4iH1FE8ztkQyxK+NNc+PTzKKgHSu8Nl2el42MYcTn2Biln7gZTGoSyCqyPaA==", "plan"=>{"meal_id"=>"", "breakfast_id"=>"12", "lunch_id"=>"12", "dinner_id"=>"12"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.6ms)
+  Rendered plans/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 64ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:19:50 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"drnZacV1zZml4SyBzF6gdBwCSst7rHJsQW2v9AhgytvVR7ZBbyXi0qjnBFq4ISj5MpFz9ZqzeB3WLBL4RnMWQA==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"2", "lunch_id"=>"12", "dinner_id"=>"12"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (2.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (4.0ms)
+  Rendered plans/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 34.8ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:20:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:20:05 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.0ms)
+  Rendered plans/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:20:09 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKbJUap2/wRB4flWOaU0dT9JhUMBL+WUw2+7S7dZqNPzr704wv2KZV+oV7qFiZDLuoxCuwpXWtZjTlu6kb/faA==", "plan"=>{"meal_id"=>"1", "food_id"=>"1"}, "commit"=>"Create Plan"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'food_id' for Plan.):
+  
+app/controllers/plans_controller.rb:27:in `create'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:21:07 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.0ms)
+  Rendered plans/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:21:12 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9t1SHDQPWnDy4pCsJcKi+B7T934LMmqtAJP+VpCnNP5VIz00nl91O//kuHdRvSp1MEDOQOotYNyX0kNa3rToZQ==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_id, :lunch_id, :dinner_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.9ms)
+  Rendered plans/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:22:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:22:52 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.2ms)
+  Rendered plans/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 82ms (Views: 57.0ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:22:56 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DuhmDOBCY1VfkxZjWu5fFde8U7cjmCifd0SnNaqpV8V14RJliMkWNEHauI/mwvurUnmUTyjgl93XZUfEjE8gfg==", "plan"=>{"meal_id"=>"6", "breakfast_id"=>"6", "lunch_id"=>"6", "dinner_id"=>"6"}, "commit"=>"Create Plan"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.9ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.2ms)
+  Rendered plans/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 59ms (Views: 31.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 01:23:26 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 46.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 01:23:27 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.5ms)
+  Rendered plans/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 117ms (Views: 41.0ms | ActiveRecord: 59.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 01:23:31 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLYbo7frngr3F543wG5LWTTnHEKtAN+lwzlxhIgSYURLv2/K32Dra+leMNt8Qu/nsSLbuqZ4YOdjGJF1rvQW/w==", "plan"=>{"meal_id"=>"4", "breakfast_id"=>"4", "lunch_id"=>"4", "dinner_id"=>"4"}, "commit"=>"Create Plan"}
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.2ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (271.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (222.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (595.3ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (431.8ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171135"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateMeals (20190202171537)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171537_create_meals.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171537"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFoods (20190202171543)
+  [1m[35m (27.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "calories" integer, "cuisine" character varying, "price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171543_create_foods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171543"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePlans (20190202171550)
+  [1m[35m (25.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "meal_id" bigint, "breakfast_id" bigint, "lunch_id" bigint, "dinner_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0c9cb82ffe"
+FOREIGN KEY ("meal_id")
+  REFERENCES "meals" ("id")
+, CONSTRAINT "fk_rails_b82d7020d6"
+FOREIGN KEY ("breakfast_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_5af46a4930"
+FOREIGN KEY ("lunch_id")
+  REFERENCES "foods" ("id")
+, CONSTRAINT "fk_rails_cf9a4b7ad8"
+FOREIGN KEY ("dinner_id")
+  REFERENCES "foods" ("id")
+)[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_meal_id" ON "plans"  ("meal_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_breakfast_id" ON "plans"  ("breakfast_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_lunch_id" ON "plans"  ("lunch_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_dinner_id" ON "plans"  ("dinner_id")[0m
+  ↳ db/migrate/20190202171550_create_plans.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171550"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-02 17:24:17.473810"], ["updated_at", "2019-02-02 17:24:17.473810"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-03 11:24:15 +0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 30ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:24:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (46.0ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 377ms (Views: 291.8ms | ActiveRecord: 51.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:25:05 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 41.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:25:06 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (16.8ms)
+  Rendered plans/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 171ms (Views: 66.9ms | ActiveRecord: 93.6ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:25:09 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YSQvC7D3LkD6hXITluqYtgCMCGhilaiBKklZnvPpwiYaLVti2HxbIeTM3P8qxjwIhUnPkGntF8OKaLlv1Q+1nQ==", "plan"=>{"meal_id"=>"2", "food_id"=>"2"}, "commit"=>"Create Plan"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'food_id' for Plan.):
+  
+app/controllers/plans_controller.rb:27:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:25:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 32.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:25:53 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.6ms)
+  Rendered plans/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 79ms (Views: 34.5ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:25:56 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iuhmHDH0mh5BAXutW/GzyA3aGU1ZWGOdq8GpQ+QIFtDx4RJ1WX/vf19I1UHn3Rd2iB/etVIg3N8L4Emywu5haw==", "plan"=>{"meal_id"=>"2", "breakfast_id"=>"2", "lunch_id"=>"2", "dinner_id"=>"2"}, "commit"=>"Create Plan"}
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (5.0ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 95.7ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:27:05 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.3ms)
+  Rendered plans/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 82ms (Views: 63.5ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:27:10 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V14lyR1XPRwPDq7UZwRzHfAM9BKxEZi8wlwI5yIOLVH0oErhtwcSVwIIhg8Te/uQ3p/NLFAOks1VHbXrbB3xyg==", "plan"=>{"meal_id"=>"11", "food_id"=>"11"}, "commit"=>"Create Plan"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'food_id' for Plan.):
+  
+app/controllers/plans_controller.rb:27:in `create'
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:28:03 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V14lyR1XPRwPDq7UZwRzHfAM9BKxEZi8wlwI5yIOLVH0oErhtwcSVwIIhg8Te/uQ3p/NLFAOks1VHbXrbB3xyg==", "plan"=>{"meal_id"=>"11", "food_id"=>"11"}, "commit"=>"Create Plan"}
+Unpermitted parameter: :food_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.2ms)
+  Rendered plans/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 94ms (Views: 48.3ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:28:13 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MqzKv3b5jr/GOKZCxTfqti9KYxQwFNsGqy8QKAogQHCRUqWX3Kmh9Ms+jpmxSGI7AdlaKtEL0Xc8bq0kRDOc6w==", "plan"=>{"meal_id"=>"11", "breakfast_id"=>"hHhhhh", "lunch_id"=>"h", "dinner_id"=>"h"}, "commit"=>"Create Plan"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.8ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:29:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 59ms (Views: 48.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:29:13 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:29:15 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.0ms)
+  Rendered plans/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 73ms (Views: 41.5ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:29:18 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+8pcmg4turTkinpKX7m8+ncWWWPDLq7gS/YNEyKBsfaAwyjzZqbP1frD1KbjlRhE8tOem8hWEaLr1+3iBGfGTQ==", "plan"=>{"meal_id"=>"d", "breakfast_id"=>"d", "lunch_id"=>"d", "dinner_id"=>"d"}, "commit"=>"Create Plan"}
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (4.0ms)
+  Rendered plans/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 63ms (Views: 36.4ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:29:29 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X79/fc0BuAIH0yzTVUWGOolRhjqVj2WaQT7+/VNd3RX8QRBVZ1GXSQrVBAghOg63p8K/BHSQb+vWf0PxHU4Bjg==", "plan"=>{"meal_id"=>"d", "breakfast_id"=>"d", "lunch_id"=>"d", "dinner_id"=>"d"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 10.5ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:35:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (1.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 107ms (Views: 91.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:35:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:35:14 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (15.4ms)
+  Rendered plans/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 104ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:35:20 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CQJfCgQZO9X0wNOt52yEMwVsWqm61GsbzaGk+YD6NE1yCytjbJJOtOqJfUFbQCCNgKmdUbGs1FltgEQIphxD9g==", "plan"=>{"meal_id"=>"e", "breakfast_id"=>"e", "lunch_id"=>"e", "dinner_id"=>"e"}, "commit"=>"Create Plan"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.8ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMeal Create (54.6ms)[0m  [1m[32mINSERT INTO "meals" ("date", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["date", "2019-02-02 00:00:00"], ["created_at", "2019-02-03 03:43:13.700517"], ["updated_at", "2019-02-03 03:43:13.700517"]]
+  [1m[35m (39.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (10.1ms)[0m  [1m[32mINSERT INTO "foods" ("name", "calories", "cuisine", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "egg"], ["calories", 200], ["cuisine", "Thai"], ["price", 10], ["created_at", "2019-02-03 03:43:19.430981"], ["updated_at", "2019-02-03 03:43:19.430981"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:49:56 +0800
+  [1m[35m (43.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (1.1ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 322ms (Views: 298.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:49:57 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (27.7ms)
+  Rendered plans/new.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 97ms (Views: 78.0ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 11:50:01 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ntaUpQIRnJWoLcht2CRgGeyZBkmaUI/gPB5cKWWt3Nvl3+DMaprp9LZkZoFkCMSnaVzBsZEoMKKcP7zYQ0urYA==", "plan"=>{"meal_id"=>"jJJj", "breakfast_id"=>"j", "lunch_id"=>"jj", "dinner_id"=>"j"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 7.2ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 11:51:40 +0800
+=======
   ↳ db/migrate/20190202150526_create_plans.rb:3
   [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_meal_id" ON "plans"  ("meal_id")[0m
   ↳ db/migrate/20190202150526_create_plans.rb:3
@@ -673,11 +1328,1155 @@ Completed 200 OK in 76ms (Views: 71.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/plans" for 127.0.0.1 at 2019-02-03 00:54:34 +0800
+>>>>>>> master
 Processing by PlansController#index as HTML
   Rendering plans/index.html.erb within layouts/application
   [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
   ↳ app/views/plans/index.html.erb:17
+<<<<<<< HEAD
+  Rendered plans/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 48.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 11:51:47 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (8.4ms)
+  Rendered plans/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 81ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:00:50 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zIMta8AYj12aKVlHhsmO8RAdjc+20I9QFmUzzeUeRKS3ilkCqJP6PIRg96s65SpPldhKN72oMBK2RNM8w/gzHw==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (1.1ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 8.9ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:01:58 +0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (23.3ms)
+  Rendered plans/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 383ms (Views: 339.1ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:02:02 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OI35e5aCr5Y674vbLrYdLk0pkbYxx4MsNG8iPZr36uKbc5ZTPNKA3TfpowBayZWjY7qoiNDYiV2jLp8x1OQ2eQ==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (1.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 16.1ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:04:24 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.7ms)
+  Rendered plans/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 76ms (Views: 56.1ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:04:29 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FQG32f2X3K0Zu/temM8jTJSrQeSd55CySc87p/V1XBG2/9jxV8fz5hS904XssKvBujh42nz4msPejoaru2aAig==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 5.7ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:15:56 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (4.1ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 121ms (Views: 88.0ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:16:00 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (7.1ms)
+  Rendered plans/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 102ms (Views: 62.4ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:16:05 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1CFk96iHnGZMYF6uUm8w2WCgLXwGqUjKGowaKGEU8WOvKBCewAzpB1Ip8ELuQ5Rn5WXqhA3R94i6rfrZR/KG2A==", "plan"=>{"meal_id"=>"1", "food_id"=>"1"}, "commit"=>"Create Plan"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'food_id' for Plan.):
+  
+app/controllers/plans_controller.rb:27:in `create'
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:17:11 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2wfOTTQVKprKUZaj8PPnZ3bUsXn6jnO2lI2BFMrOpBYknARnoB74WYvboH7vEcQs0hr+wb1M79NE4sIHTjmCw==", "plan"=>{"meal_id"=>"1", "food_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameter: :food_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (1.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.9ms)
+  Rendered plans/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 137ms (Views: 64.3ms | ActiveRecord: 21.7ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:17:18 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tw4JJYEMh3jUpTeRsWJ+anVb1c7wvcsFfI/QaTxHsdcU8GYNK1yoM9mjH0rFHfbnW8js8BGiwXTrzm1lclRtTA==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:25:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (1.1ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 67ms (Views: 53.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:25:23 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.0ms)
+  Rendered plans/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 96ms (Views: 60.2ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:25:28 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXTdARgoTakpuJdb8UypNuLqD0/HuxFAjky75XjRGmYmfalocKM4yDfxObdNYA2IZy/It8zDrgIubVsUXjdt3Q==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.1ms)
+  Rendered plans/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 71ms (Views: 35.8ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:26:15 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"81MTDLt/8xwS5uHsW71dFBDflIiT+S5wEVFiZA+MJt9QrXwkES/cVx/gyTcvwtWZPkyttnLmJAGGEN9oQZ/6RA==", "plan"=>{"meal_id"=>"02-02-2019", "breakfast_id"=>"egg", "lunch_id"=>"egg", "dinner_id"=>"egg"}, "commit"=>"Create Plan"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (1.2ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.5ms)
+  Rendered plans/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 60ms (Views: 48.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:26:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 60ms (Views: 50.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:26:40 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.6ms)
+  Rendered plans/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 85ms (Views: 59.0ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:26:51 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qjrITs4Bikbm1M3i2YJWk9qUFV/EMP2+VYRKfVm9aCnRM7wnpor/J/idYw5lrvItX1HSp89IQvz1paqMf1sfkg==", "plan"=>{"meal_id"=>"02-02-2019", "breakfast_id"=>"egg", "lunch_id"=>"egg", "dinner_id"=>"egg"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT  "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 7.2ms)
+
+
+  
+NameError (uninitialized constant Plan::Breakfast):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:28:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 64ms (Views: 40.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:28:28 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.1ms)
+  Rendered plans/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 73ms (Views: 47.9ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:28:33 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/3ckKbAnTJY0en+FOouYVYmZHK/JouKXnC79jsDvdQyEflBA2Kw59yoz0WmGpzzrDFzbV8LaXdU8Dx1/5gkCtw==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (60.8ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["meal_id", 1], ["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:28:33.377324"], ["updated_at", "2019-02-03 04:28:33.377324"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/1
+Completed 302 Found in 67ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:28:33 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `meal' for #<Plan:0x00007fc9004f1f98>
+Did you mean?  meals):
+    2: 
+    3: <p>
+    4:   <strong>Meal:</strong>
+    5:   <%= @plan.meal %>
+    6: </p>
+    7: 
+    8: <p>
+  
+app/views/plans/show.html.erb:5:in `_app_views_plans_show_html_erb___3342031263808564587_70250635167280'
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:28:59 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (48.8ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `breakfast' for #<Plan:0x00007fc903c333f8>
+Did you mean?  breakfasts
+               breakfasts=
+               breakfast_id):
+     7: 
+     8: <p>
+     9:   <strong>Food:</strong>
+    10:   <%= @plan.breakfast %>
+    11: </p>
+    12: 
+    13: <p>
+  
+app/views/plans/show.html.erb:10:in `_app_views_plans_show_html_erb___3342031263808564587_70250627609280'
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:29:18 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (15.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Plan::Breakfast):
+     7: 
+     8: <p>
+     9:   <strong>Food:</strong>
+    10:   <%= @plan.breakfasts %>
+    11: </p>
+    12: 
+    13: <p>
+  
+app/views/plans/show.html.erb:10:in `_app_views_plans_show_html_erb___3342031263808564587_70250627254960'
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:29:33 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (1.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 65ms (Views: 57.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:29:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `meal' for #<Plan:0x00007fc9038e1ce0>
+Did you mean?  meals):
+    16:   <tbody>
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meal %></td>
+    20:         <td><%= plan.breakfast %></td>
+    21:         <td><%= plan.lunch %></td>
+    22:         <td><%= plan.dinner %></td>
+  
+app/views/plans/index.html.erb:19:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250662583760'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250662583760'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:30:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `breakfast' for #<Plan:0x00007fc9028e3ac8>
+Did you mean?  breakfasts
+               breakfasts=
+               breakfast_id):
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meals %></td>
+    20:         <td><%= plan.breakfast %></td>
+    21:         <td><%= plan.lunch %></td>
+    22:         <td><%= plan.dinner %></td>
+    23:         <td><%= link_to 'Show', plan %></td>
+  
+app/views/plans/index.html.erb:20:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250654197680'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250654197680'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:30:32 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:30:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `meal' for #<Plan:0x00007fc902ddc6d8>
+Did you mean?  meals):
+    16:   <tbody>
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meal %></td>
+    20:         <td><%= plan.breakfast_id %></td>
+    21:         <td><%= plan.lunch_id %></td>
+    22:         <td><%= plan.dinner_id %></td>
+  
+app/views/plans/index.html.erb:19:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250635395080'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250635395080'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:30:57 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `meal' for #<Plan:0x00007fc8ff5ab908>
+Did you mean?  meals):
+    16:   <tbody>
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meal %></td>
+    20:         <td><%= plan.breakfast_id %></td>
+    21:         <td><%= plan.lunch_id %></td>
+    22:         <td><%= plan.dinner_id %></td>
+  
+app/views/plans/index.html.erb:19:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250627303580'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250627303580'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:31:04 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `meal' for #<Plan:0x00007fc902c9fec8>
+Did you mean?  meals):
+    16:   <tbody>
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meal %></td>
+    20:         <td><%= plan.breakfast_id %></td>
+    21:         <td><%= plan.lunch_id %></td>
+    22:         <td><%= plan.dinner_id %></td>
+  
+app/views/plans/index.html.erb:19:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250656022480'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250656022480'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:31:17 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 77ms (Views: 55.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:31:26 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 72ms (Views: 51.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/plans/1/edit" for 127.0.0.1 at 2019-02-03 12:31:29 +0800
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/edit.html.erb within layouts/application
+  Rendered plans/_form.html.erb (7.3ms)
+  Rendered plans/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/plans/1" for 127.0.0.1 at 2019-02-03 12:31:35 +0800
+Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K8qJmNhAv8TD9yYIemFwByleeP98mHic7h4af3nAqCQ1zqni5ihpJnmxkQWa/+3kyj9oedDmfQUtiSWCiIlnFg==", "plan"=>{"meal_id"=>"02-02-2019", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Update Plan", "id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[36mPlan Update (45.0ms)[0m  [1m[33mUPDATE "plans" SET "meal_id" = $1, "updated_at" = $2 WHERE "plans"."id" = $3[0m  [["meal_id", 2], ["updated_at", "2019-02-03 04:31:35.563547"], ["id", 1]]
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:44
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 45.8ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "plans" violates foreign key constraint "fk_rails_0c9cb82ffe"
+DETAIL:  Key (meal_id)=(2) is not present in table "meals".
+: UPDATE "plans" SET "meal_id" = $1, "updated_at" = $2 WHERE "plans"."id" = $3):
+  
+app/controllers/plans_controller.rb:44:in `block in update'
+app/controllers/plans_controller.rb:43:in `update'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:31:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.8ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 54ms (Views: 48.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:32:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:33:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (1.1ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `meals' for #<Plan:0x00007fc903c731d8>
+Did you mean?  meal
+               meal=):
+    16:   <tbody>
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meals %></td>
+    20:         <td><%= plan.breakfast_id %></td>
+    21:         <td><%= plan.lunch_id %></td>
+    22:         <td><%= plan.dinner_id %></td>
+  
+app/views/plans/index.html.erb:19:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250657085680'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250657085680'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:33:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:33:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:33:45 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.7ms)
+  Rendered plans/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 77ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:33:51 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IcCKAPUeIY3aJj5/vPausmXXsLLxkoRE8mrafyCBDLpayf5pnZVU7MRvkJMA2goM4BJ3SvrqOwZSSzqOBmd7AQ==", "plan"=>{"meal"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameter: :meal
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (43.4ms)[0m  [1m[32mINSERT INTO "plans" ("breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:33:51.190740"], ["updated_at", "2019-02-03 04:33:51.190740"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/2
+Completed 302 Found in 59ms (ActiveRecord: 49.7ms)
+
+
+Started GET "/plans/2" for 127.0.0.1 at 2019-02-03 12:33:51 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:34:35 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 68ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:34:37 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.1ms)
+  Rendered plans/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 74ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:34:45 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bgjkfimVm/nlf5LIgLgaBZNxos7iCjK3YuztPOdby1EVAZAXQR7umPs2PCQ8lL67FrRlNulyjfXCzQ3Nwb286g==", "plan"=>{"meal_id"=>"02-02-2019", "breakfast_id"=>"egg", "lunch_id"=>"egg", "dinner_id"=>"egg"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (41.5ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["meal_id", 2], ["breakfast_id", 0], ["lunch_id", 0], ["dinner_id", 0], ["created_at", "2019-02-03 04:34:45.950512"], ["updated_at", "2019-02-03 04:34:45.950512"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 41.9ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "plans" violates foreign key constraint "fk_rails_0c9cb82ffe"
+DETAIL:  Key (meal_id)=(2) is not present in table "meals".
+: INSERT INTO "plans" ("meal_id", "breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:35:28 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `breakfast_name' for #<Plan:0x00007fc903d03d28>
+Did you mean?  breakfast_id
+               breakfast_id=
+               breakfast_id?
+               breakfast_ids
+               breakfast_ids=):
+    17:     <% @plans.each do |plan| %>
+    18:       <tr>
+    19:         <td><%= plan.meal %></td>
+    20:         <td><%= plan.breakfast_name %></td>
+    21:         <td><%= plan.lunch_name %></td>
+    22:         <td><%= plan.dinner_name %></td>
+    23:         <td><%= link_to 'Show', plan %></td>
+  
+app/views/plans/index.html.erb:20:in `block in _app_views_plans_index_html_erb___2824840901010690499_70250656720220'
+app/views/plans/index.html.erb:17:in `_app_views_plans_index_html_erb___2824840901010690499_70250656720220'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:35:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:35:43 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (7.1ms)
+  Rendered plans/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 76ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:35:48 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p5257gjodWn2pmjvt44+gIm12Qv9Y9sA62QtMrf4p+/clM2HYGMACOjvxgMLopo+DHAe8/YbZEJLRc3DkR7QVA==", "plan"=>{"meal_id"=>"02-02-2019", "breakfast_name"=>"egg", "lunch_name"=>"egg", "dinner_name"=>"eg"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_name, :lunch_name, :dinner_name
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (42.5ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_id", 2], ["created_at", "2019-02-03 04:35:48.187170"], ["updated_at", "2019-02-03 04:35:48.187170"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:30
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 43.0ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "plans" violates foreign key constraint "fk_rails_0c9cb82ffe"
+DETAIL:  Key (meal_id)=(2) is not present in table "meals".
+: INSERT INTO "plans" ("meal_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
+  
+app/controllers/plans_controller.rb:30:in `block in create'
+app/controllers/plans_controller.rb:29:in `create'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:37:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 94ms (Views: 73.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:37:36 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (27.7ms)
+  Rendered plans/new.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:37:44 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwx4z3MSpuQ1yj2rXgole1/kNxAmj8jEed4Do3S1fVAEBQymG5nThSuDk0fiJoHF2iHw6C33d4bZ/+NSUlMK6w==", "plan"=>{"meal_id"=>"1", "breakfast_name"=>"1", "lunch_name"=>"1", "dinner_name"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_name, :lunch_name, :dinner_name
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (41.2ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_id", 1], ["created_at", "2019-02-03 04:37:44.247992"], ["updated_at", "2019-02-03 04:37:44.247992"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/5
+Completed 302 Found in 53ms (ActiveRecord: 47.3ms)
+
+
+Started GET "/plans/5" for 127.0.0.1 at 2019-02-03 12:37:44 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:37:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (6.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 66ms (Views: 56.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:37:48 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (4.9ms)
+  Rendered plans/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:38:00 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I7BATrObwa3e9Mjfw0FSrXLXca/a3R44LWDhR5RBTqZYuTQn2xC0zMC9ZjN/bfYT9xK2V9GloXqNQQG2sqc5HQ==", "plan"=>{"meal_id"=>"1", "breakfast_name"=>"1", "lunch_name"=>"1", "dinner_name"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameters: :breakfast_name, :lunch_name, :dinner_name
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (0.5ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_id", 1], ["created_at", "2019-02-03 04:38:00.326229"], ["updated_at", "2019-02-03 04:38:00.326229"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (71.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/6
+Completed 302 Found in 103ms (ActiveRecord: 79.0ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2019-02-03 12:38:00 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans/6" for 127.0.0.1 at 2019-02-03 12:38:32 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 89ms (Views: 57.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:38:33 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (1.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:38:34 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.0ms)
+  Rendered plans/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 79ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:38:40 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTxLaROeMYctn0Qy6CBxSxpRHqHur7s4lZCxf257knzeNT8AexVE5jPW6t5UDNX1n5TZWeXXBHo1sVGOSJ3lxw==", "plan"=>{"meal_id"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (1.7ms)[0m  [1m[32mINSERT INTO "plans" ("meal_id", "breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["meal_id", 1], ["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:38:40.414476"], ["updated_at", "2019-02-03 04:38:40.414476"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/7
+Completed 302 Found in 54ms (ActiveRecord: 44.8ms)
+
+
+Started GET "/plans/7" for 127.0.0.1 at 2019-02-03 12:38:40 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:38:42 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.9ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:38:53 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (7.6ms)
+  Rendered plans/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 68ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:38:58 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NdSygVSkk7f1/mRdAZUZopkOHxm8QiQQcFlhCj55Cf9O3cboPC/m1uu3yrG9ub0cHMvY4bc6m1LQeIH7GJ9+RA==", "plan"=>{"meal"=>"1", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameter: :meal
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (4.6ms)[0m  [1m[32mINSERT INTO "plans" ("breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:38:58.329374"], ["updated_at", "2019-02-03 04:38:58.329374"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/8
+Completed 302 Found in 52ms (ActiveRecord: 45.3ms)
+
+
+Started GET "/plans/8" for 127.0.0.1 at 2019-02-03 12:38:58 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:38:59 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:39:06 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.1ms)
+  Rendered plans/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 78ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:39:10 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BeTBvs6s/2fIc0yK+wIZr+G3yK1fYtQWTmZV8OZGEGB+7bXXpieKBtY64mZHLr0RZHIPVVQaa1TuR7UBwKBn2w==", "plan"=>{"meal"=>"#<Meal::ActiveRecord_Associations_CollectionProxy:0x00007fc902f2cbf0>", "breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+Unpermitted parameter: :meal
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (1.0ms)[0m  [1m[32mINSERT INTO "plans" ("breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:39:10.518437"], ["updated_at", "2019-02-03 04:39:10.518437"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/9
+Completed 302 Found in 47ms (ActiveRecord: 41.8ms)
+
+
+Started GET "/plans/9" for 127.0.0.1 at 2019-02-03 12:39:10 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:39:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (2.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 68ms (Views: 60.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:40:35 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (5.1ms)
+  Rendered plans/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 69ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:41:26 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (2.8ms)
+  Rendered plans/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 67ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:41:30 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (4.2ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 66ms (Views: 56.9ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/plans/1" for 127.0.0.1 at 2019-02-03 12:42:22 +0800
+Processing by PlansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ebNYi99aPOekYS/X41LHVZz8/1UaD7VBCJ1Z6lEaD8LaTTejdQoTrKlnBwyXLU/Ysm/Ga/sQvzCf3OTmHwnTWQ==", "id"=>"1"}
+  [1m[36mPlan Load (41.9ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:57
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 42.3ms)
+
+
+  
+NameError (uninitialized constant Plan::Dinner):
+  
+app/controllers/plans_controller.rb:57:in `destroy'
+Started GET "/plans/1/edit" for 127.0.0.1 at 2019-02-03 12:43:34 +0800
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/edit.html.erb within layouts/application
+  Rendered plans/_form.html.erb (3.9ms)
+  Rendered plans/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/plans/1" for 127.0.0.1 at 2019-02-03 12:43:37 +0800
+Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a2WQM7ysItRp3IlbahM1SQn++pUSCeTbLuR/Vv1m+tx1YbBJgsT0NtOaPlaKjaiq6p/qE7534ULtc0CrDC817g==", "plan"=>{"breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Update Plan", "id"=>"1"}
+  [1m[36mPlan Load (9.9ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:44
+Redirected to http://localhost:3000/plans/1
+Completed 302 Found in 16ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:43:37 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:43:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 60ms (Views: 47.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans/1/edit" for 127.0.0.1 at 2019-02-03 12:43:40 +0800
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/edit.html.erb within layouts/application
+  Rendered plans/_form.html.erb (6.3ms)
+  Rendered plans/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 85ms (Views: 79.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/plans/1" for 127.0.0.1 at 2019-02-03 12:43:44 +0800
+Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HDdT77AF7leMUgD51spVoEgRwR398o/a0LnFhCeX50MCM3OVjm04tTYUt/Q2VMhDq3DRm1GMikMTLvp51t4ocQ==", "plan"=>{"breakfast_id"=>"12", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Update Plan", "id"=>"1"}
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[36mPlan Update (42.7ms)[0m  [1m[33mUPDATE "plans" SET "breakfast_id" = $1, "updated_at" = $2 WHERE "plans"."id" = $3[0m  [["breakfast_id", 12], ["updated_at", "2019-02-03 04:43:44.924761"], ["id", 1]]
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:44
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 43.6ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "plans" violates foreign key constraint "fk_rails_b82d7020d6"
+DETAIL:  Key (breakfast_id)=(12) is not present in table "foods".
+: UPDATE "plans" SET "breakfast_id" = $1, "updated_at" = $2 WHERE "plans"."id" = $3):
+  
+app/controllers/plans_controller.rb:44:in `block in update'
+app/controllers/plans_controller.rb:43:in `update'
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:46:25 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 78ms (Views: 71.0ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (1.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "calories", "cuisine", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "toast"], ["calories", 800], ["cuisine", "Western"], ["price", 100], ["created_at", "2019-02-03 04:48:06.008702"], ["updated_at", "2019-02-03 04:48:06.008702"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/plans/1/edit" for 127.0.0.1 at 2019-02-03 12:48:09 +0800
+Processing by PlansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (18.9ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/edit.html.erb within layouts/application
+  Rendered plans/_form.html.erb (11.9ms)
+  Rendered plans/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 112ms (Views: 82.4ms | ActiveRecord: 18.9ms)
+
+
+Started PATCH "/plans/1" for 127.0.0.1 at 2019-02-03 12:48:16 +0800
+Processing by PlansController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u9BEqIqvoLqF5MFOt3oKuYdBM2EMQo/LZ8Z7KeEocvWl1GTStMd2WD+idkNX5JdaZCAj56A8ilKkUUTUEGG9xw==", "plan"=>{"breakfast_id"=>"1", "lunch_id"=>"2", "dinner_id"=>"1"}, "commit"=>"Update Plan", "id"=>"1"}
+  [1m[36mPlan Load (0.9ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[36mPlan Update (41.6ms)[0m  [1m[33mUPDATE "plans" SET "lunch_id" = $1, "updated_at" = $2 WHERE "plans"."id" = $3[0m  [["lunch_id", 2], ["updated_at", "2019-02-03 04:48:16.772548"], ["id", 1]]
+  ↳ app/controllers/plans_controller.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:44
+Redirected to http://localhost:3000/plans/1
+Completed 302 Found in 59ms (ActiveRecord: 43.4ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2019-02-03 12:48:16 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:48:18 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (5.9ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 76ms (Views: 63.5ms | ActiveRecord: 5.9ms)
+
+
+Started DELETE "/plans/2" for 127.0.0.1 at 2019-02-03 12:49:03 +0800
+Processing by PlansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gDGnLj/oG8wtcKAMgQ4MVy3MxkIM9Cs3x9lZjHQxhZYjz8gGlbg0hyB2iNf1cYTaA1//fO3rIUZQmOSAOiJZDQ==", "id"=>"2"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/plans_controller.rb:57
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (uninitialized constant Plan::Dinner):
+  
+app/controllers/plans_controller.rb:57:in `destroy'
+Started GET "/plans/new" for 127.0.0.1 at 2019-02-03 12:49:35 +0800
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (4.7ms)
+  Rendered plans/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-03 12:49:39 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h6EjHwpkBLXu4djAJJcchUnTAo2cXeDuhDqdCkz3u7b8qFd2Yu9x1PCodiyYu7g7zBbFdZclX6wkG337ahHMDQ==", "plan"=>{"breakfast_id"=>"1", "lunch_id"=>"1", "dinner_id"=>"1"}, "commit"=>"Create Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[36mPlan Create (1.2ms)[0m  [1m[32mINSERT INTO "plans" ("breakfast_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["breakfast_id", 1], ["lunch_id", 1], ["dinner_id", 1], ["created_at", "2019-02-03 04:49:39.310303"], ["updated_at", "2019-02-03 04:49:39.310303"]]
+  ↳ app/controllers/plans_controller.rb:30
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:30
+Redirected to http://localhost:3000/plans/10
+Completed 302 Found in 46ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/plans/10" for 127.0.0.1 at 2019-02-03 12:49:39 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:67
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-03 12:49:40 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.7ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:17
+  Rendered plans/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.7ms)
+=======
   Rendered plans/index.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 0.6ms)
+>>>>>>> master
 
 
