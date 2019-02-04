@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :plans
+  resources :food_meals
   resources :foods
   resources :meals
   devise_for :users
