@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Calories</th>
       <th>Cuisine</th>
+      <th>Calories</th>
       <th>Price</th>
       <th colspan="3"></th>
     </tr>
@@ -17,8 +17,8 @@
     <% @foods.each do |food| %>
       <tr>
         <td><%= food.name %></td>
-        <td><%= food.calories %></td>
         <td><%= food.cuisine %></td>
+        <td><%= food.calories %></td>
         <td><%= food.price %></td>
         <td><%= link_to 'Show', food %></td>
         <td><%= link_to 'Edit', edit_food_path(food) %></td>

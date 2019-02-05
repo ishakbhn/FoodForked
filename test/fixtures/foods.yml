@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  calories: 1
   cuisine: MyString
-  price: 1
+  calories: 1
+  price: 1.5
 
 two:
   name: MyString
-  calories: 1
   cuisine: MyString
-  price: 1
+  calories: 1
+  price: 1.5
