@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
   root 'plans#index'
-  get '/profile' => 'plans#profile'
+  get '/profile' => 'plans#profile', as: 'profile'
+  post '/listing' => 'plans#listing', as: 'listing'
   resources :plans
-  resources :foods
+  # resources :foods
   devise_for :users
 
 

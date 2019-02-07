@@ -7,6 +7,13 @@ class PlansController < ApplicationController
 
   def index
     @foods = Food.select(:cuisine).distinct
+  end
+
+  def listing
+    @plans = Plan.all
+    @foods_b = Food.where(cuisine: params[:foods][:bf_id])
+       @foods_l = Food.where(cuisine: params[:foods][:lch_id])
+          @foods_d = Food.where(cuisine: params[:foods][:din_id])
 
   end
 
@@ -70,7 +77,7 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
     @plan.destroy
     respond_to do |format|
-      format.html { redirect_to plans_url, notice: 'Plan was successfully destroyed.' }
+      format.html { redirect_to profile_url, notice: 'Plan was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
