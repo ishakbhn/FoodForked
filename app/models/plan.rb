@@ -1,3 +1,4 @@
 class Plan < ApplicationRecord
-  has_many :foods
+  # correct syntax
+  belongs_to :food
 end

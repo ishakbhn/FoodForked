@@ -2,15 +2,18 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @plan.date %>
+  <%= @plans.date %>
+</p>
+    <% lunch = @plans.lunch_id.to_i - 1%>
+    <% dinner = @plans.dinner_id.to_i - 1%>
+<p>
+  <strong>Food</strong>
+  <div><strong>Breakfast:</strong><%= @plans.food.name %> <%= @plans.food.calories %> cal  $<%= @plans.food.price %></div>
+   <div><strong>Lunch:</strong><%= @foods[lunch].name %> <%= @foods[lunch].calories %> cal  $<%= @foods[lunch].price %></div>
+   <div><strong>Dinner:</strong><%= @foods[dinner].name %> <%= @foods[dinner].calories %> cal  $<%= @foods[dinner].price %> </div>
 </p>
 
-<p>
-  <strong>Food:</strong>
-   <% @foods.each do |food| %>
-   <%= food.name %>
-   <% end %>
-</p>
+
 
 <%= link_to 'Edit', edit_plan_path(@plan) %> |
 <%= link_to 'Back', plans_path %>
