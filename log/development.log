@@ -27081,3 +27081,1263 @@ Processing by PlansController#index as HTML
 Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.1ms)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7865.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (217.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (196.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Project-3_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (478.7ms)[0m  [1m[35mCREATE DATABASE "Project-3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (394.3ms)[0m  [1m[35mCREATE DATABASE "Project-3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190202171135)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:5
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190202171135_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202171135"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateFoods (20190205171915)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying, "cuisine" character varying, "calories" integer, "price" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190205171915_create_foods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190205171915"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePlans (20190205171949)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "date" date, "food_id" bigint, "lunch_id" integer, "dinner_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190205171949_create_plans.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_food_id" ON "plans"  ("food_id")[0m
+  ↳ db/migrate/20190205171949_create_plans.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190205171949"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-07 15:04:08.922433"], ["updated_at", "2019-02-07 15:04:08.922433"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(831320575666916790)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/plans" for 127.0.0.1 at 2019-02-07 23:05:42 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 362ms (Views: 342.7ms | ActiveRecord: 3.7ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (2.1ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Rice"], ["cuisine", "Chinese"], ["calories", 607], ["price", 3.5], ["created_at", "2019-02-07 15:06:10.634056"], ["updated_at", "2019-02-07 15:06:10.634056"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chendol"], ["cuisine", "Chinese"], ["calories", 386], ["price", 2.5], ["created_at", "2019-02-07 15:06:10.638531"], ["updated_at", "2019-02-07 15:06:10.638531"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fried Bee Hoon"], ["cuisine", "Chinese"], ["calories", 427], ["price", 2.0], ["created_at", "2019-02-07 15:06:10.640606"], ["updated_at", "2019-02-07 15:06:10.640606"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mee Goreng"], ["cuisine", "Indian"], ["calories", 500], ["price", 4.5], ["created_at", "2019-02-07 15:06:10.642505"], ["updated_at", "2019-02-07 15:06:10.642505"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Laksa"], ["cuisine", "Chinese"], ["calories", 591], ["price", 4.0], ["created_at", "2019-02-07 15:06:10.644566"], ["updated_at", "2019-02-07 15:06:10.644566"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nasi Lemak"], ["cuisine", "Malay"], ["calories", 657], ["price", 3.5], ["created_at", "2019-02-07 15:06:10.646749"], ["updated_at", "2019-02-07 15:06:10.646749"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mee Siam"], ["cuisine", "Baba"], ["calories", 694], ["price", 3.0], ["created_at", "2019-02-07 15:06:10.648471"], ["updated_at", "2019-02-07 15:06:10.648471"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Chop"], ["cuisine", "Western"], ["calories", 390], ["price", 5.0], ["created_at", "2019-02-07 15:06:10.650209"], ["updated_at", "2019-02-07 15:06:10.650209"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fish n Chips"], ["cuisine", "Western"], ["calories", 570], ["price", 3.5], ["created_at", "2019-02-07 15:06:10.651994"], ["updated_at", "2019-02-07 15:06:10.651994"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aglio Olio"], ["cuisine", "Western"], ["calories", 355], ["price", 8.0], ["created_at", "2019-02-07 15:06:10.654033"], ["updated_at", "2019-02-07 15:06:10.654033"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lasagna"], ["cuisine", "Chinese"], ["calories", 400], ["price", 7.0], ["created_at", "2019-02-07 15:06:10.656163"], ["updated_at", "2019-02-07 15:06:10.656163"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chee Cheong Fun"], ["cuisine", "Chinese"], ["calories", 132], ["price", 1.5], ["created_at", "2019-02-07 15:06:10.658225"], ["updated_at", "2019-02-07 15:06:10.658225"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Waffle"], ["cuisine", "Chinese"], ["calories", 192], ["price", 5.5], ["created_at", "2019-02-07 15:06:10.660349"], ["updated_at", "2019-02-07 15:06:10.660349"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Teh Tarik"], ["cuisine", "Indian"], ["calories", 9], ["price", 3.5], ["created_at", "2019-02-07 15:06:10.662295"], ["updated_at", "2019-02-07 15:06:10.662295"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Prata"], ["cuisine", "Indian"], ["calories", 122], ["price", 1.5], ["created_at", "2019-02-07 15:06:10.664638"], ["updated_at", "2019-02-07 15:06:10.664638"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Curry Puff"], ["cuisine", "Malay"], ["calories", 190], ["price", 1.2], ["created_at", "2019-02-07 15:06:10.666532"], ["updated_at", "2019-02-07 15:06:10.666532"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Pad Thai"], ["cuisine", "Thai"], ["calories", 299], ["price", 5.0], ["created_at", "2019-02-07 15:06:10.668369"], ["updated_at", "2019-02-07 15:06:10.668369"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Beef Noodle"], ["cuisine", "Thai"], ["calories", 362], ["price", 6.0], ["created_at", "2019-02-07 15:06:10.670432"], ["updated_at", "2019-02-07 15:06:10.670432"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Seafood Tom Yam"], ["cuisine", "Thai"], ["calories", 362], ["price", 7.0], ["created_at", "2019-02-07 15:06:10.672860"], ["updated_at", "2019-02-07 15:06:10.672860"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Granola"], ["cuisine", "Western"], ["calories", 60], ["price", 2.5], ["created_at", "2019-02-07 15:06:10.674855"], ["updated_at", "2019-02-07 15:06:10.674855"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coco Crunch"], ["cuisine", "Western"], ["calories", 120], ["price", 1.5], ["created_at", "2019-02-07 15:06:10.676676"], ["updated_at", "2019-02-07 15:06:10.676676"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mee Rebus"], ["cuisine", "Malay"], ["calories", 555], ["price", 2.5], ["created_at", "2019-02-07 15:06:10.678698"], ["updated_at", "2019-02-07 15:06:10.678698"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lontong"], ["cuisine", "Malay"], ["calories", 466], ["price", 3.0], ["created_at", "2019-02-07 15:06:10.680845"], ["updated_at", "2019-02-07 15:06:10.680845"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mee Soto"], ["cuisine", "Malay"], ["calories", 520], ["price", 3.0], ["created_at", "2019-02-07 15:06:10.682985"], ["updated_at", "2019-02-07 15:06:10.682985"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Teriyaki Chicken Bento"], ["cuisine", "Japanese"], ["calories", 180], ["price", 8.0], ["created_at", "2019-02-07 15:06:10.685270"], ["updated_at", "2019-02-07 15:06:10.685270"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ramen"], ["cuisine", "Japanese"], ["calories", 170], ["price", 7.0], ["created_at", "2019-02-07 15:06:10.687757"], ["updated_at", "2019-02-07 15:06:10.687757"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tuna Sashimi"], ["cuisine", "Japanese"], ["calories", 80], ["price", 8.0], ["created_at", "2019-02-07 15:06:10.689979"], ["updated_at", "2019-02-07 15:06:10.689979"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chuka Hotate"], ["cuisine", "Japanese"], ["calories", 72], ["price", 8.0], ["created_at", "2019-02-07 15:06:10.691944"], ["updated_at", "2019-02-07 15:06:10.691944"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bulgogi"], ["cuisine", "Korean"], ["calories", 72], ["price", 7.0], ["created_at", "2019-02-07 15:06:10.693926"], ["updated_at", "2019-02-07 15:06:10.693926"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "cuisine", "calories", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kimchi Ramen"], ["cuisine", "Korean"], ["calories", 260], ["price", 6.0], ["created_at", "2019-02-07 15:06:10.696196"], ["updated_at", "2019-02-07 15:06:10.696196"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+Started GET "/plans" for 127.0.0.1 at 2019-02-07 23:06:13 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 45ms (Views: 37.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:06:33 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 34ms (Views: 22.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:13:01 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:13:52 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:14:21 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:14:37 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:14:40 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  Rendered plans/listing.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 4.1ms)
+
+
+  
+SyntaxError (/Users/ishak/Projects/Project-3/app/views/plans/listing.html.erb:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/plans/listing.html.erb:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:16:03 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 44ms (Views: 36.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:17:25 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:18:01 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:20:13 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-02-07 23:20:16 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:20:17 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BXpJnd7wYcEBgR7RV3WXY/d3Py0nIQqddPS8HaVtqZDse0ScaorDwXV/BHnG3614I1lOcGgSkwXIPU3uUBspCA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:20:28 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BXpJnd7wYcEBgR7RV3WXY/d3Py0nIQqddPS8HaVtqZDse0ScaorDwXV/BHnG3614I1lOcGgSkwXIPU3uUBspCA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Western", "din_id"=>"Malay"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 35.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:34:41 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:35:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:35:49 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-02-07 23:35:53 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:35:56 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahdq6w8Dbm0js8YklkoUKeoy9GLF4HtECseEP0eWVySDFmfqu3nMbVdN3IwH4C4yPhyFP4rT4ty2DnXMsuDXvA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Chinese", "din_id"=>"Korean"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  Rendered plans/listing.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ishak/Projects/Project-3/app/views/plans/listing.html.erb:50: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/plans/listing.html.erb:50: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:36:52 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahdq6w8Dbm0js8YklkoUKeoy9GLF4HtECseEP0eWVySDFmfqu3nMbVdN3IwH4C4yPhyFP4rT4ty2DnXMsuDXvA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Chinese", "din_id"=>"Korean"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  Rendered plans/listing.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ishak/Projects/Project-3/app/views/plans/listing.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/plans/listing.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2019-02-07 23:39:48 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:39:53 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ae+EENhK3pLwhRfPFNShK43LQDsadanRwYReNrtVr/yA7okRbDB8koR7DWeFfpswWeUxZlVGMEl9Ta/FTiMvZA==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Chinese", "din_id"=>"Indian"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  Rendered plans/listing.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ishak/Projects/Project-3/app/views/plans/listing.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/plans/listing.html.erb:51: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2019-02-07 23:40:06 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:40:12 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhfGMrsaGke40lduN84DZzfpP1g5UwQhYDvjvVPm3l3fFsszD2C4R8wsTcamZDl848dOBXZgnbnc8hJOppBexQ==", "foods"=>{"bf_id"=>"Western", "lch_id"=>"Chinese", "din_id"=>"Indian"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:18
+  [1m[36mPlan Load (1.1ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered plans/listing.html.erb within layouts/application (239.8ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dinner' for #<#<Class:0x00007ffeb69ba278>:0x00007ffeb0a8ec40>):
+    37:         <td><%= food.name %></td>
+    38:         <td><%= food.calories %></td>
+    39:         <td><%= food.price %></td>
+    40:         <td><%= @foods[dinner].name  %></td>
+    41:       </tr>
+    42:      <% end %>
+    43:   </tbody>
+  
+app/views/plans/listing.html.erb:40:in `block (2 levels) in _app_views_plans_listing_html_erb__1443393192486952730_70365931335120'
+app/views/plans/listing.html.erb:35:in `block in _app_views_plans_listing_html_erb__1443393192486952730_70365931335120'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__1443393192486952730_70365931335120'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:40:41 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhfGMrsaGke40lduN84DZzfpP1g5UwQhYDvjvVPm3l3fFsszD2C4R8wsTcamZDl848dOBXZgnbnc8hJOppBexQ==", "foods"=>{"bf_id"=>"Western", "lch_id"=>"Chinese", "din_id"=>"Indian"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:42:57 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:43:11 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhfGMrsaGke40lduN84DZzfpP1g5UwQhYDvjvVPm3l3fFsszD2C4R8wsTcamZDl848dOBXZgnbnc8hJOppBexQ==", "foods"=>{"bf_id"=>"Indian", "lch_id"=>"Indian", "din_id"=>"Chinese"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (2.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:18
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered plans/listing.html.erb within layouts/application (227.3ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007ffeb69ba278>:0x00007ffeb0bab088>):
+    36:       <tr>
+    37:         <td><%= food.name %></td>
+    38:         <td><%= food.calories %></td>
+    39:         <td><%= food.price %> <%= f.collection_check_boxes :food_id, @foods, :id, :name %></td>
+    40:         <td></td>
+    41:       </tr>
+    42:      <% end %>
+  
+app/views/plans/listing.html.erb:39:in `block (2 levels) in _app_views_plans_listing_html_erb__1443393192486952730_70365931724100'
+app/views/plans/listing.html.erb:35:in `block in _app_views_plans_listing_html_erb__1443393192486952730_70365931724100'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__1443393192486952730_70365931724100'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:43:30 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhfGMrsaGke40lduN84DZzfpP1g5UwQhYDvjvVPm3l3fFsszD2C4R8wsTcamZDl848dOBXZgnbnc8hJOppBexQ==", "foods"=>{"bf_id"=>"Japanese", "lch_id"=>"Baba", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Baba"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    36:       <tr>
+    37:         <td><%= food.name %></td>
+    38:         <td><%= food.calories %></td>
+    39:         <td><%= food.price %> <%= form.collection_check_boxes :food_id, @foods, :id, :name %></td>
+    40:         <td></td>
+    41:       </tr>
+    42:      <% end %>
+  
+app/views/plans/listing.html.erb:39:in `block (2 levels) in _app_views_plans_listing_html_erb__1443393192486952730_70365980943360'
+app/views/plans/listing.html.erb:35:in `block in _app_views_plans_listing_html_erb__1443393192486952730_70365980943360'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__1443393192486952730_70365980943360'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:56:27 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 7.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    34:   <tbody>
+    35:   	<% @foods_b.each do |food| %>
+    36:       <tr>
+    37:       	<td><%= form.collection_check_boxes :food_id, @foods, :id, :name %></td>
+    38:         <td><%= food.name %></td>
+    39:         <td><%= food.calories %></td>
+    40:         <td><%= food.price %> </td>
+  
+app/views/plans/listing.html.erb:37:in `block (2 levels) in _app_views_plans_listing_html_erb__2240092667129573063_70111524677240'
+app/views/plans/listing.html.erb:35:in `block in _app_views_plans_listing_html_erb__2240092667129573063_70111524677240'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__2240092667129573063_70111524677240'
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:56:58 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:13
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:18
+  Rendered plans/listing.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    34:   <tbody>
+    35: 
+    36:       <tr>
+    37:       	<td><%= form.collection_check_boxes :food_id, @foods, :id, :name %></td>
+    38:       	<% @foods_b.each do |food| %>
+    39:         <td><%= food.name %></td>
+    40:         <td><%= food.calories %></td>
+  
+app/views/plans/listing.html.erb:37:in `block in _app_views_plans_listing_html_erb__2240092667129573063_70111489518140'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__2240092667129573063_70111489518140'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:00:35 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:7
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:12
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:27
+  Rendered plans/listing.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    47:   </thead>
+    48: 
+    49:   <tbody>
+    50:   		<% @foods_lch.each do |food| %>
+    51:       <tr>
+    52:       	<td></td>
+    53:         <td><%= food.name %></td>
+  
+app/views/plans/listing.html.erb:50:in `block in _app_views_plans_listing_html_erb__2240092667129573063_70111487469920'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__2240092667129573063_70111487469920'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:01:17 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:7
+  [1m[36mFood Load (1.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:12
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:27
+  Rendered plans/listing.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 197ms (Views: 193.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:01:55 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Western", "lch_id"=>"Japanese", "din_id"=>"Baba"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:7
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Baba"]]
+  ↳ app/views/plans/listing.html.erb:12
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:27
+  Rendered plans/listing.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:02:27 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:02:35 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Baba", "lch_id"=>"Malay", "din_id"=>"Thai"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:7
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:12
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Baba"]]
+  ↳ app/views/plans/listing.html.erb:26
+  Rendered plans/listing.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:03:26 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Baba", "lch_id"=>"Malay", "din_id"=>"Thai"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:7
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:12
+  [1m[36mFood Load (1.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Baba"]]
+  ↳ app/views/plans/listing.html.erb:26
+  Rendered plans/listing.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:03:59 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:04:08 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Japanese", "lch_id"=>"Western", "din_id"=>"Malay"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:16
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:37
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:58
+  Rendered plans/listing.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:04:26 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Malay", "lch_id"=>"Western", "din_id"=>"Malay"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:16
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:37
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:58
+  Rendered plans/listing.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:06:59 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:07:15 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:16
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:37
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:58
+  Rendered plans/listing.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:10:25 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:16
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:37
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."cuisine" = $1 LIMIT $2[0m  [["cuisine", "Japanese"], ["LIMIT", 11]]
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered plans/listing.html.erb within layouts/application (221.5ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f88349afd80>:0x00007f883b478ec8>):
+    39:         <td><%= food.name %></td>
+    40:         <td><%= food.calories %></td>
+    41:         <td><%= food.price %> </td>
+    42:         <td><%= f.collection_check_boxes :ranger_ids, food.id, :id, :name %></td>
+    43:       </tr>
+    44:      <% end %>
+    45:   </tbody>
+  
+app/views/plans/listing.html.erb:42:in `block (2 levels) in _app_views_plans_listing_html_erb__2240092667129573063_70111543413860'
+app/views/plans/listing.html.erb:37:in `block in _app_views_plans_listing_html_erb__2240092667129573063_70111543413860'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__2240092667129573063_70111543413860'
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:10:49 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:16
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:37
+  Rendered plans/listing.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for 6:Integer
+Did you mean?  tap):
+    39:         <td><%= food.name %></td>
+    40:         <td><%= food.calories %></td>
+    41:         <td><%= food.price %> </td>
+    42:         <td><%= form.collection_check_boxes :ranger_ids, food.id, :id, :name %></td>
+    43:       </tr>
+    44:      <% end %>
+    45:   </tbody>
+  
+app/views/plans/listing.html.erb:42:in `block (2 levels) in _app_views_plans_listing_html_erb__2240092667129573063_70111538321940'
+app/views/plans/listing.html.erb:37:in `block in _app_views_plans_listing_html_erb__2240092667129573063_70111538321940'
+app/views/plans/listing.html.erb:3:in `_app_views_plans_listing_html_erb__2240092667129573063_70111538321940'

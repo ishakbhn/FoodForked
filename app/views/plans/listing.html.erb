@@ -1,24 +1,72 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_with scope: :plans, url: plans_path, local: true do |form| %>
 <h1>Plans</h1>
 
+<table>
+  <thead>
+      <th>Breakfast</th>
+      <th>Calories</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<h3>Breakfast</h3>
+  <tbody>
+  		<% @foods_b.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.calories %></td>
+        <td><%= food.price %> </td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
 
-<% @foods_b.each do |food| %>
-    <p> <%= food.name %> </p>
+<table>
+  <thead>
+    <tr>
+      <th>Lunch</th>
+      <th>Calories</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
+  <tbody>
+  		<% @foods_l.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.calories %></td>
+        <td><%= food.price %> </td>
+        <td><%= form.collection_check_boxes :ranger_ids, food.id, :id, :name %></td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dinner</th>
+      <th>Calories</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  		<% @foods_d.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.calories %></td>
+        <td><%= food.price %> </td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+
+	<p>
+    <%= form.submit %>
+  </p>
 <% end %>
-
-<h3>Lunch</h3>
-<% @foods_l.each do |food| %>
-    <p> <%= food.name %> </p>
-
-<% end %>
-
-<h3>Dinner</h3>
-<% @foods_d.each do |food| %>
-    <p> <%= food.name %> </p>
-
-<% end %>
-
