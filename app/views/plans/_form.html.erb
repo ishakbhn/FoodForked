@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.datetime_select :date %>
+    <%= form.date_select :date %>
   </div>
 
   <div class="field">
@@ -23,12 +23,12 @@
 
     <div class="field">
     <%= form.label :lunch_id %>
-    <%= form.collection_select :food_id, @foods,:id, :name %>
+    <%= form.collection_select :lunch_id, @foods,:id, :name %>
   </div>
 
     <div class="field">
     <%= form.label :dinner_id %>
-    <%= form.collection_select :food_id, @foods,:id, :name %>
+    <%= form.collection_select :dinner_id, @foods,:id, :name %>
   </div>
 
   <div class="actions">

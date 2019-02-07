@@ -1,9 +1,16 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
 
+
   # GET /plans
   # GET /plans.json
+
   def index
+    @foods = Food.select(:cuisine).distinct
+
+  end
+
+  def profile
     @plans = Plan.all
     @foods = Food.all
   end
@@ -11,6 +18,7 @@ class PlansController < ApplicationController
   # GET /plans/1
   # GET /plans/1.json
   def show
+    @plans = Plan.find(params[:id])
     @foods = Food.all
   end
 
@@ -22,6 +30,7 @@ class PlansController < ApplicationController
 
   # GET /plans/1/edit
   def edit
+    @plans = Plan.find(params[:id])
     @foods = Food.all
   end
 
@@ -74,6 +83,6 @@ class PlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_params
-      params.require(:plan).permit(:date, :breakfast_id, :lunch_id, :dinner_id)
+      params.require(:plan).permit(:date, :breakfast_id, :lunch_id, :dinner_id, :food_id)
     end
 end
