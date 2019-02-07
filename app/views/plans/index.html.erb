@@ -1,22 +1,31 @@
-<%= form_with scope: :plan, url: plans_path, local: true do |form| %>
+<%= link_to 'Log in', new_user_session_url %>
+<%= link_to 'Register', new_user_registration_url %>
+
+
+<%= form_with scope: :foods, url: listing_path, local: true do |form| %>
 
   <p>
      <%= form.label :breakfast_id %>
-    <%= form.collection_select :food_id, @foods,:id, :cuisine %>
+    <%= form.collection_select :bf_id, @foods, :cuisine, :cuisine %>
   </p>
 
   <p>
      <%= form.label :lunch_id %>
-    <%= form.collection_select :food_id, @foods,:id, :cuisine %>
+    <%= form.collection_select :lch_id, @foods,:cuisine, :cuisine %>
   </p>
 
   <p>
      <%= form.label :dinner_id %>
-    <%= form.collection_select :food_id, @foods,:id, :cuisine %>
+    <%= form.collection_select :din_id, @foods,:cuisine, :cuisine %>
   </p>
+
+
+
 
 
   <p>
     <%= form.submit %>
   </p>
 <% end %>
+
+
