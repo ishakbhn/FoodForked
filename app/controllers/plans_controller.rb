@@ -10,6 +10,7 @@ class PlansController < ApplicationController
 
   def listing
     @plans = Plan.all
+    @foods = Food.all
     @foods_b = Food.where(cuisine: params[:foods][:bf_id])
     @foods_l = Food.where(cuisine: params[:foods][:lch_id])
     @foods_d = Food.where(cuisine: params[:foods][:din_id])
