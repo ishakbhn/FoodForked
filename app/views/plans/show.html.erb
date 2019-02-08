@@ -12,23 +12,13 @@
    <div><strong>Dinner:</strong><%= @foods[dinner].name %> <%= @foods[dinner].calories %> cal  $<%= @foods[dinner].price %> </div>
 </p>
 
-<%
-total = 0
-	total = @foods[dinner].price + @foods[lunch].price + @plans.food.price
-%>
+<% total = 0
+total = @foods[dinner].price + @foods[lunch].price + @plans.food.price %>
 
-<%
-calories = 0
-	calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calories
-%>
+<% calories = 0
+calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calories %>
 
 
-<h4> Total Price :$<%= total %> </h4>
+<h4> Total Price: $<%= total %> </h4>
 
-<h4> Total Calories: <%= calories %> </h4>
-
-
-
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'View my plans', profile_path %> |
-<td><%= link_to 'Delete this plan', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<h4> Total Calories: <%= calories %> cal </h4>
