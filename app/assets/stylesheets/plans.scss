@@ -1,3 +1,44 @@
 // Place all the styles related to the Plans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#form-input {
+    background-color: white;
+}
+
+// input {
+//     border-radius: 5px;
+//     padding: .5% 2%;
+//     background-color: #db504a;
+//     border: none;
+//     color: white;
+//     cursor: pointer;
+// }
+
+.button {
+    border-radius: 5px;
+    padding: .5% 2%;
+    background-color: #db504a;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#align-text {
+    padding-top: 19%;
+}
+
+#modal-index {
+    border: none;
+}
+
+.text {
+    color: #eca400;
+}
+
+#form-bg {
+    background-color: #f4f4f4;
+    background-image: asset-url('index-bg.png');
+    height: 600px;
+    margin-top: 12px;
+}
