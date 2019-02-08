@@ -1,31 +1,70 @@
-<%= link_to 'Log in', new_user_session_url %>
-<%= link_to 'Register', new_user_registration_url %>
-
-
-<%= form_with scope: :foods, url: listing_path, local: true do |form| %>
-
-  <p>
-     <%= form.label :breakfast_id %>
-    <%= form.collection_select :bf_id, @foods, :cuisine, :cuisine %>
-  </p>
-
-  <p>
-     <%= form.label :lunch_id %>
-    <%= form.collection_select :lch_id, @foods,:cuisine, :cuisine %>
-  </p>
-
-  <p>
-     <%= form.label :dinner_id %>
-    <%= form.collection_select :din_id, @foods,:cuisine, :cuisine %>
-  </p>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active pr-5" href="#"><%= link_to 'Log in', new_user_session_url %></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active px-5" href="#"><%= link_to 'Register', new_user_registration_url %></a>
+  </li>
+</ul>
 
 
 
+<div id="form-bg" class="text-center">
+    <div class="text text-uppercase" id="align-text">Your one-stop meal planner</div>
+
+    Can’t think of what to eat today? <br>
+    Create your meal plan in seconds with FoodForked right now!<br>
+
+    <button type="button" class="button mt-3" data-toggle="modal" data-target="#exampleModalCenter">Start</button>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choose your cuisine!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+                <%= form_with scope: :foods, url: listing_path, local: true do |form| %>
+                <div class="container text-center" id="form-input">
+
+                      <div class="text">I want to eat:</div><br>
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="text"><%= form.label :breakfast_id %> <br></div>
+                        <%= form.collection_select :bf_id, @foods, :cuisine, :cuisine %>
+                      </div>
+                      <div class="col-sm">
+                        <div class="text"><%= form.label :lunch_id %> <br></div>
+                        <%= form.collection_select :lch_id, @foods,:cuisine, :cuisine %>
+                      </div>
+                      <div class="col-sm">
+                        <div class="text"><%= form.label :dinner_id %> <br></div>
+                        <%= form.collection_select :din_id, @foods,:cuisine, :cuisine %>
+                      </div>
+
+          <div class="modal-footer" id="modal-index">
+            <button type="button" class="btn button"><%= form.submit('Submit') %></button>
+
+            <% end %>
+          </div>
 
 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+      </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
 
 

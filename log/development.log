@@ -27081,6 +27081,7 @@ Processing by PlansController#index as HTML
 Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.1ms)
 
 
+<<<<<<< HEAD
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
@@ -27478,6 +27479,34 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:14:37 +0800
+=======
+Started GET "/plans" for 127.0.0.1 at 2019-02-07 18:37:57 +0800
+  [1m[35m (18.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 341ms (Views: 314.2ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:38:03 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owh7f6KZfgCbqmODQQXXxBLUuW6jJJ2AF+7kEZWjZLk5fa6eu1EaOttbrihxffD0LNKbIP1XHcaSySo0v3j9Nw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 57ms (Views: 44.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 18:48:18 +0800
+>>>>>>> master
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -27508,6 +27537,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/listing" for 127.0.0.1 at 2019-02-07 23:14:40 +0800
 Processing by PlansController#listing as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
@@ -27599,6 +27629,23 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:20:13 +0800
+=======
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:49:30 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owh7f6KZfgCbqmODQQXXxBLUuW6jJJ2AF+7kEZWjZLk5fa6eu1EaOttbrihxffD0LNKbIP1XHcaSySo0v3j9Nw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Japanese", "din_id"=>"Western"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 86ms (Views: 60.9ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 18:49:34 +0800
+>>>>>>> master
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -27629,6 +27676,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-07 23:20:16 +0800
 Processing by PlansController#index as HTML
   Rendering plans/index.html.erb within layouts/application
@@ -27698,6 +27746,74 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
 Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:35:39 +0800
+=======
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:49:54 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owh7f6KZfgCbqmODQQXXxBLUuW6jJJ2AF+7kEZWjZLk5fa6eu1EaOttbrihxffD0LNKbIP1XHcaSySo0v3j9Nw==", "foods"=>{"bf_id"=>"Indian", "lch_id"=>"Baba", "din_id"=>"Thai"}, "commit"=>"Save Foods"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Baba"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 58ms (Views: 49.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-07 18:50:18 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:9
+  Rendered plans/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:50:32 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2uTEh+9aDWqUJk02ujTz5tpVk6KvpRZHmJ0F+b+wMDJAkRFm9pJpUNTXgJ2KTNTW5FOx7PHWlgEdusvclWupvA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 65ms (Views: 52.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:50:46 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2uTEh+9aDWqUJk02ujTz5tpVk6KvpRZHmJ0F+b+wMDJAkRFm9pJpUNTXgJ2KTNTW5FOx7PHWlgEdusvclWupvA==", "foods"=>{"bf_id"=>"Malay", "lch_id"=>"Japanese", "din_id"=>"Indian"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 56ms (Views: 45.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:51:52 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2uTEh+9aDWqUJk02ujTz5tpVk6KvpRZHmJ0F+b+wMDJAkRFm9pJpUNTXgJ2KTNTW5FOx7PHWlgEdusvclWupvA==", "foods"=>{"bf_id"=>"Malay", "lch_id"=>"Thai", "din_id"=>"Indian"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 64ms (Views: 55.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 18:52:01 +0800
+>>>>>>> master
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -27728,7 +27844,25 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/listing" for 127.0.0.1 at 2019-02-07 23:35:49 +0800
+=======
+Started POST "/listing" for 127.0.0.1 at 2019-02-07 18:52:04 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2uTEh+9aDWqUJk02ujTz5tpVk6KvpRZHmJ0F+b+wMDJAkRFm9pJpUNTXgJ2KTNTW5FOx7PHWlgEdusvclWupvA==", "foods"=>{"bf_id"=>"Malay", "lch_id"=>"Thai", "din_id"=>"Indian"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Thai"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-07 18:57:11 +0800
+>>>>>>> master
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -27759,6 +27893,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-02-07 23:35:53 +0800
 Processing by PlansController#index as HTML
   Rendering plans/index.html.erb within layouts/application
@@ -28905,6 +29040,2146 @@ ActionController::ParameterMissing (param is missing or the value is empty: plan
 app/controllers/plans_controller.rb:92:in `plan_params'
 app/controllers/plans_controller.rb:46:in `create'
 Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:50:25 +0800
+=======
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:44:34 +0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 6484ms (Views: 6414.7ms | ActiveRecord: 53.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:45:16 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 140ms (Views: 115.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:47:25 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 131ms (Views: 123.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:47:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 78.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:47:47 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:47:55 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:09 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:13 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 83ms (Views: 76.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:19 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:30 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:48:40 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:20
+  Rendered plans/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 73ms (Views: 66.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:49:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:21
+  Rendered plans/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 92ms (Views: 87.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:49:54 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:21
+  Rendered plans/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 91ms (Views: 81.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:50:00 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:21
+  Rendered plans/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:50:55 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 116ms (Views: 111.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:52:07 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 333ms (Views: 310.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:52:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 145ms (Views: 139.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:52:28 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 105ms (Views: 99.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:52:44 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 116ms (Views: 109.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:53:18 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 99ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:53:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 87ms (Views: 79.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:56:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 160ms (Views: 151.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:58:17 +0800
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 4521ms (Views: 4494.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:59:16 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 2978ms (Views: 2972.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 05:59:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 2783ms (Views: 2776.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:00:19 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 1152ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...-radius: 10px; ": expected "}", was "!important"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/style.scss:3
+app/assets/stylesheets/application.scss:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3153838076535374238_70305341053780'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:00:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 3757ms (Views: 3749.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:01:08 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 551ms (Views: 546.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:01:47 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 102ms (Views: 96.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:02:32 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 93ms (Views: 88.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:03:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 75ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:03:10 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 91ms (Views: 85.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:03:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 93ms (Views: 86.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:04:06 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 89ms (Views: 84.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:04:19 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:05:09 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 2881ms (Views: 2873.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:06:02 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 170ms (Views: 165.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:06:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 96ms (Views: 90.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:06:56 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:07:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 3129ms (Views: 3118.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:07:55 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 3245ms (Views: 3238.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:08:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2627ms (Views: 2622.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:08:10 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 2553ms (Views: 2546.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:08:25 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 2684ms (Views: 2677.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:08:35 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 2575ms (Views: 2568.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:08:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 2765ms (Views: 2760.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:09:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2567ms (Views: 2560.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:09:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 2701ms (Views: 2695.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:09:25 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 2557ms (Views: 2552.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:09:32 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 2659ms (Views: 2653.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:09:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 3084ms (Views: 3078.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:10:02 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 99ms (Views: 93.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 06:10:13 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+n1XFmRnwbng6458bnNw9+xBvnEQ3H5XkYDVUQgf7htgCIL3fa+lg6AaQ9deC1fH0kecP06v/hEUpxt0IsR3lQ==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (41.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 130ms (Views: 72.4ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:10:54 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 3223ms (Views: 3216.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:11:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 3030ms (Views: 3024.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:11:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 2785ms (Views: 2779.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:11:44 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 2758ms (Views: 2752.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:12:13 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 3043ms (Views: 3038.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:12:59 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 3701ms (Views: 3696.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:13:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 122ms (Views: 118.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:14:28 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 126ms (Views: 121.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:14:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 82ms (Views: 74.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:14:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 118ms (Views: 113.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:15:04 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 118ms (Views: 114.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:15:15 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 111ms (Views: 104.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 06:15:26 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C33ywwt1gaNzhXxZt+dpn7rgmraEOxGYo/o41GdImrmRCCciEr3lmTN0sfKHn06vhOa4+NpIkd4m3fbxTZMDNw==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 151ms (Views: 139.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:39:56 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 3772ms (Views: 3751.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:07 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 457ms (Views: 437.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/images/index-bg.png" for 127.0.0.1 at 2019-02-08 06:44:08 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:16 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 99ms (Views: 91.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/index-bg.png" for 127.0.0.1 at 2019-02-08 06:44:16 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 0.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:44:59 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/index-bg.png" for 127.0.0.1 at 2019-02-08 06:44:59 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:45:05 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/index-bg.png" for 127.0.0.1 at 2019-02-08 06:45:05 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:52:56 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 3091ms (Views: 3079.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/images/index-bg.png" for 127.0.0.1 at 2019-02-08 06:52:59 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/index-bg.png"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:53:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 116ms (Views: 103.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 114ms (Views: 110.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 3096ms (Views: 3091.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 2764ms (Views: 2758.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 2753ms (Views: 2748.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (7.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 3112ms (Views: 3098.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:54:57 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 2770ms (Views: 2760.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:55:10 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 2609ms (Views: 2602.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:55:37 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 3038ms (Views: 3031.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:55:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 2865ms (Views: 2858.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:56:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 2614ms (Views: 2606.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:56:09 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 2549ms (Views: 2544.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:56:17 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 2702ms (Views: 2692.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:56:24 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 2569ms (Views: 2564.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:57:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 2708ms (Views: 2704.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:58:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (20.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 3027ms (Views: 2999.9ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:58:48 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2890ms (Views: 2884.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:59:08 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 967ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    box-shadow": expected ";", was ": 0px 3px #8989..."):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/plans.scss:7
+app/assets/stylesheets/application.scss:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3153838076535374238_70305406693680'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:59:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 2803ms (Views: 2796.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 06:59:35 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 2631ms (Views: 2626.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:00:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 2978ms (Views: 2969.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:00:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 145ms (Views: 136.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:00:44 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 98ms (Views: 93.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:00:54 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 104ms (Views: 98.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:01:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 139ms (Views: 129.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:01:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 103ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:01:44 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:23
+  Rendered plans/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 107ms (Views: 100.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:02:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 103ms (Views: 96.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:03:02 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 122ms (Views: 116.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:03:47 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 235ms (Views: 204.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:03:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 151ms (Views: 138.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:04:57 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 133ms (Views: 126.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:11 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 126ms (Views: 117.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:13 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 111ms (Views: 103.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:17 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 89ms (Views: 84.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:26 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 100ms (Views: 95.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 99ms (Views: 91.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:05:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 129ms (Views: 124.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:06:00 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:28
+  Rendered plans/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:07:06 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:29
+  Rendered plans/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 103ms (Views: 94.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:07:10 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:29
+  Rendered plans/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 83ms (Views: 70.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:08:17 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:29
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 3141ms (Views: 3133.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:08:28 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:29
+  Rendered plans/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 2712ms (Views: 2707.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:09:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT "foods"."cuisine" FROM "foods" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/Sheryl/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered plans/index.html.erb within layouts/application (576.1ms)
+Completed 500 Internal Server Error in 596ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fe2795e4008>:0x00007fe27ac16510>
+Did you mean?  fork):
+    15:     Can’t think of what to eat today? <br>
+    16:     Create your meal plan in seconds with FoodForked right now!
+    17: 
+    18:     <%= form.submit('Submit') %>
+    19: 
+    20: </div>
+    21: 
+  
+app/views/plans/index.html.erb:18:in `_app_views_plans_index_html_erb__3589322725126144366_70305349444740'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:09:28 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:31
+  Rendered plans/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 124ms (Views: 119.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:10:25 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 100ms (Views: 93.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:03 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 3001ms (Views: 2996.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 2778ms (Views: 2767.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:29 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 114ms (Views: 108.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:33 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 136ms (Views: 128.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2888ms (Views: 2883.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:11:49 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 2663ms (Views: 2657.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:12:07 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:55
+  Rendered plans/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 148ms (Views: 142.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:14:08 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:61
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 130ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:14:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:61
+  Rendered plans/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 177ms (Views: 167.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:17:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:40
+  Rendered plans/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 143ms (Views: 138.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:17:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 92ms (Views: 86.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:18:58 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 95ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:19:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 96ms (Views: 91.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:20:24 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (460.5ms)
+Completed 500 Internal Server Error in 481ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fe2795e4008>:0x00007fe28015ff08>
+Did you mean?  fork):
+    50: 
+    51:           <div class="modal-footer">
+    52:             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    53:             <%= form.submit('Submit') %>
+    54:           </div>
+    55:         </div>
+    56:       </div>
+  
+app/views/plans/index.html.erb:53:in `_app_views_plans_index_html_erb__3589322725126144366_70305390634140'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:20:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:21:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 85ms (Views: 80.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:21:10 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 74ms (Views: 67.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:21:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:21:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 124ms (Views: 119.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:22:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:22:48 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:23:07 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 131ms (Views: 124.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:23:10 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJN2Kmee6sd6A5WN6pqSDzifmLWroi9ZcM0dCL6Q74OC5qPLflaO/TryWCba4rU/Bpm6+/XRrx/16tMtlEt2DQ==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (2.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 79ms (Views: 69.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:23:33 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 91ms (Views: 83.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:24:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 126ms (Views: 117.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:24:32 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 136ms (Views: 131.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:24:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 77ms (Views: 71.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:24:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.3ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 138ms (Views: 126.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:25:14 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 125ms (Views: 113.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:25:20 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 88ms (Views: 80.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:25:53 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 118ms (Views: 110.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:26:31 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 94ms (Views: 89.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:26:57 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 131ms (Views: 125.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:27:04 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 110ms (Views: 101.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:27:16 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 112ms (Views: 105.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:27:33 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 162ms (Views: 153.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:27:48 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 123ms (Views: 115.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:28:21 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 157ms (Views: 139.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:28:32 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 124ms (Views: 114.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:29:15 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 139ms (Views: 130.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:29:35 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 128ms (Views: 116.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:31:08 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 160ms (Views: 151.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:31:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 126ms (Views: 117.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:31:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (3.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 146ms (Views: 136.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:32:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 130ms (Views: 125.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:32:50 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 126ms (Views: 113.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:33:00 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 200ms (Views: 194.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:33:23 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 97ms (Views: 89.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:33:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 94ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:34:11 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 102ms (Views: 91.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:34:39 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 86ms (Views: 77.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:34:53 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TggoM/2jPGqE1aALCg6VeoMR52mMoAcDHrEYU6/Ah1rUff3S5GtYUMQkbaA6drJKvRfFJ9LTh0WbltZ2hRse1A==", "foods"=>{"bf_id"=>"Western", "lch_id"=>"Chinese", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (3.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Western"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 113ms (Views: 95.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:36:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 3408ms (Views: 3401.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:36:34 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 2802ms (Views: 2797.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:36:51 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 3164ms (Views: 3154.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:37:15 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 117ms (Views: 108.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:37:24 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 76ms (Views: 71.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:37:30 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 90ms (Views: 85.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:37:43 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:38:42 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (18.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 230ms (Views: 200.5ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:38:54 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 86ms (Views: 81.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:39:01 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 108ms (Views: 102.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:39:06 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 97ms (Views: 92.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:39:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:39:41 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 158ms (Views: 150.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:39:50 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8PAkI1NVA3bkA5en8dZHg4Pbmy6cFSnsaLaeWIX62EFthVxlIUwN5thw/Wvv34uMAlMIuQD1OE0hRRcSMxy7w==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 88ms (Views: 83.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-08 07:40:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 167ms (Views: 91.6ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-08 07:40:13 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 3183ms (Views: 3181.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:40:17 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (8.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 113ms (Views: 98.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:41:03 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yX0oJyOY3bUq3ptsXzh7CvwZFUy/QUokgi14eur/eJv0pbtSdUjv+7tj0K74tk8xsbJmBEbd0m+j1KLJgpZHhA==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 86ms (Views: 75.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:42:27 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 3389ms (Views: 3383.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-08 07:42:32 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 142ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:43:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 106ms (Views: 100.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:44:36 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 175ms (Views: 167.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 07:44:39 +0800
+>>>>>>> master
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -28935,6 +31210,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:50:28 +0800
 Processing by PlansController#listing as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
@@ -28961,6 +31237,17 @@ ActionController::ParameterMissing (param is missing or the value is empty: plan
 app/controllers/plans_controller.rb:92:in `plan_params'
 app/controllers/plans_controller.rb:46:in `create'
 Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:51:38 +0800
+=======
+Started GET "/" for 127.0.0.1 at 2019-02-08 07:44:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (2.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 148ms (Views: 140.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 07:44:47 +0800
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -28991,6 +31278,39 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 07:44:53 +0800
+>>>>>>> master
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:51:42 +0800
 Processing by PlansController#listing as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
@@ -29017,6 +31337,39 @@ ActionController::ParameterMissing (param is missing or the value is empty: plan
 app/controllers/plans_controller.rb:92:in `plan_params'
 app/controllers/plans_controller.rb:46:in `create'
 Started GET "/listing" for 127.0.0.1 at 2019-02-08 00:52:05 +0800
+=======
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:44:55 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (468.4ms)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `listing' for #<#<Class:0x00007fe2795e4008>:0x00007fe281dcb340>
+Did you mean?  listing_url):
+    47:                       </div>
+    48: 
+    49:           <div class="modal-footer" id="modal-index">
+    50:             <button type="button" class="btn button"><%= link_to 'Submit', listing %></button>
+    51: 
+    52:             <% end %>
+    53:           </div>
+  
+app/views/plans/index.html.erb:50:in `block in _app_views_plans_index_html_erb__3589322725126144366_70305409031760'
+app/views/plans/index.html.erb:31:in `_app_views_plans_index_html_erb__3589322725126144366_70305409031760'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:45:04 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 07:45:08 +0800
   
 ActionController::RoutingError (No route matches [GET] "/listing"):
   
@@ -29047,6 +31400,39 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/listing" for 127.0.0.1 at 2019-02-08 07:46:24 +0800
+>>>>>>> master
+  
+ActionController::RoutingError (No route matches [GET] "/listing"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/listing" for 127.0.0.1 at 2019-02-08 00:52:07 +0800
 Processing by PlansController#listing as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"+F8Hyma3cQVoUQr9up9WV1kwRv22hwA9RR0VFRCaHF8RXgrL0s3TBRyvEFUrNWxMjR43oPm0maX51OTm5eycxw==", "foods"=>{"bf_id"=>"Thai", "lch_id"=>"Malay", "din_id"=>"Japanese"}, "commit"=>"Save Foods"}
@@ -29185,5 +31571,173 @@ Processing by PlansController#index as HTML
   ↳ app/views/plans/index.html.erb:9
   Rendered plans/index.html.erb within layouts/application (4.6ms)
 Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.8ms)
+=======
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:46:26 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 131ms (Views: 120.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:46:28 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"authenticity_token"=>"uh99IkZaS7ifto1UymUznIrhRNF4XOh2SvBG3/WzGf0gaqjDX5Ivgt9HQP/6HRSstOdmnyYvaDDP14j632iAcw=="}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/plans_controller.rb:14:in `listing'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:46:43 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (433.0ms)
+Completed 500 Internal Server Error in 453ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fe2795e4008>:0x00007fe2809c80c8>):
+    47:                       </div>
+    48: 
+    49:           <div class="modal-footer" id="modal-index">
+    50:             <button type="button" class="btn button"><%= link_to 'Submit', listing_url, method: post %></button>
+    51: 
+    52:             <% end %>
+    53:           </div>
+  
+app/views/plans/index.html.erb:50:in `block in _app_views_plans_index_html_erb__3589322725126144366_70305398539540'
+app/views/plans/index.html.erb:31:in `_app_views_plans_index_html_erb__3589322725126144366_70305398539540'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:47:12 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (4.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 152ms (Views: 138.8ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:47:15 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"authenticity_token"=>"N5pxsFXQnGZt027B4XmwqeB9v4Pt4JkEaiWgdWvB0MGt76RRTBj4XC0io2rRAZeZ3nudzbOTGULvAm5QQRpJTw=="}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/plans_controller.rb:14:in `listing'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:49:44 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (4.7ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 122ms (Views: 113.1ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:49:46 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"authenticity_token"=>"ah9VuwOKhlppmh4BybEmTSMAfN9truDsovhYkL3TxkrwaoBaGkLiYClr06r5yQF9HQZekTPdYKon35a1lwhfxA=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/plans_controller.rb:14:in `listing'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:50:00 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 94ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:50:03 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"authenticity_token"=>"rJmEEHGiE3g0K1V3HgxNV5O757iY8klQSsXxRCLUfuY27FHxaGp3QnTamNwudGpnrb3F9saByRbP4j9hCA/naA=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/plans_controller.rb:14:in `listing'
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 07:50:46 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 98ms (Views: 91.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 07:50:47 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fcbtqbYG3xEAHB0etHs3kfB3/XA9MoSAy22iju0nIA/nszhIr867K0Dt0LWEAxChznHfPmNBBMZOSmyrx/y5gQ==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Korean", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (1.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 101ms (Views: 92.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-08 09:49:28 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 342ms (Views: 314.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 09:49:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (62.4ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 194ms (Views: 117.8ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-08 09:49:48 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 126ms (Views: 124.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2019-02-08 09:50:45 +0800
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 170ms (Views: 164.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 09:51:10 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ia7aEzRlt3BXQ2xqzma2Jw0h3HG2w1GDpbe866BlLG+72w/yLa3TSheyocH+HpEXMyf+P+iw0cUgkHLOir614Q==", "foods"=>{"bf_id"=>"Korean", "lch_id"=>"Japanese", "din_id"=>"Korean"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (40.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:8
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Japanese"]]
+  ↳ app/views/plans/listing.html.erb:14
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Korean"]]
+  ↳ app/views/plans/listing.html.erb:20
+  Rendered plans/listing.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 146ms (Views: 96.0ms | ActiveRecord: 41.5ms)
+>>>>>>> master
 
 
