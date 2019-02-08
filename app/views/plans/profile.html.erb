@@ -2,7 +2,7 @@
 
 <h1>Plans</h1>
 
-
+<%= link_to 'New Plan', new_plan_path %>
 <table>
   <thead>
     <tr>
@@ -21,17 +21,18 @@
     <% dinner = plan.dinner_id.to_i - 1 %>
 
       <tr>
-        <td><%= plan.date %></td>
-        <td><%= plan.food.name %></td>
-        <td><%= @foods[lunch].name %></td>
-        <td><%= @foods[dinner].name  %></td>
+          <td><%=  link_to plan.date, "/plans/#{plan.id}" %></td>
+          <td><%= plan.food.name %></td>
+          <td><%= @foods[lunch].name %></td>
+          <td><%= @foods[dinner].name  %></td>
+        </a>
       </tr>
 
       <tr>
-      <td><%= link_to 'Show', plan %></td>
-        <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
-        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
     </tr>
+
+
 
     <% end %>
   </tbody>
@@ -39,4 +40,3 @@
 
 <br>
 
-<%= link_to 'New Plan', new_plan_path %>

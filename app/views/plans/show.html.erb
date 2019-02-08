@@ -27,7 +27,8 @@ calories = 0
 
 <h4> Total Calories: <%= calories %> </h4>
 
-<button>Randomize <%= @plans.food.name.shuffle.first %> </button>
+
 
 <%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', profile_path %>
+<%= link_to 'View my plans', profile_path %> |
+<td><%= link_to 'Delete this plan', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
