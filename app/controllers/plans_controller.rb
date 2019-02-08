@@ -15,7 +15,6 @@ class PlansController < ApplicationController
     @foods_b = Food.where(cuisine: params[:foods][:bf_id])
     @foods_l = Food.where(cuisine: params[:foods][:lch_id])
     @foods_d = Food.where(cuisine: params[:foods][:din_id])
-
   end
 
   def profile
@@ -95,6 +94,7 @@ class PlansController < ApplicationController
       params.require(:plan).permit(:date, :breakfast_id, :lunch_id, :dinner_id, :food_id)
     end
 
+
     def sortable_columns
       ['date','breakfast_id','lunch_id','dinner_id']
     end
@@ -108,3 +108,4 @@ class PlansController < ApplicationController
     end
 
 end
+
