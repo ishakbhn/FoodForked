@@ -31741,3 +31741,119 @@ Completed 200 OK in 146ms (Views: 96.0ms | ActiveRecord: 41.5ms)
 >>>>>>> master
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:04:17 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ishak/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "foods"."cuisine" FROM "foods"[0m
+  ↳ app/views/plans/index.html.erb:38
+  Rendered plans/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 374ms (Views: 353.1ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/listing" for 127.0.0.1 at 2019-02-08 15:04:26 +0800
+Processing by PlansController#listing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BXVNBIgaA73xL5X1Qe21Ai56gm4oFeotAe/JUPWQJa/sdEAFPGChvYXRj13QR48Z+lTzM2cmc7W9JjijAOalNw==", "foods"=>{"bf_id"=>"Chinese", "lch_id"=>"Indian", "din_id"=>"Malay"}, "commit"=>"Submit"}
+  Rendering plans/listing.html.erb within layouts/application
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Chinese"]]
+  ↳ app/views/plans/listing.html.erb:18
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Indian"]]
+  ↳ app/views/plans/listing.html.erb:40
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."cuisine" = $1[0m  [["cuisine", "Malay"]]
+  ↳ app/views/plans/listing.html.erb:62
+  Rendered plans/listing.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 60ms (Views: 52.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/plans" for 127.0.0.1 at 2019-02-08 15:04:31 +0800
+Processing by PlansController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2354HW+cR2LmbhzIwmQQZ0O7/OdzE7pbacHVjmgzIkWbPThwcTTHf9notuyo6paSSCertL/13HRbvalzNZMEQ==", "plan"=>{"date(1i)"=>"2019", "date(2i)"=>"2", "date(3i)"=>"8", "food_id"=>"1", "lunch_id"=>"4", "dinner_id"=>"6"}, "commit"=>"Save Plan"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plans_controller.rb:50
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:50
+  [1m[36mPlan Create (0.8ms)[0m  [1m[32mINSERT INTO "plans" ("date", "food_id", "lunch_id", "dinner_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-02-08"], ["food_id", 1], ["lunch_id", 4], ["dinner_id", 6], ["created_at", "2019-02-08 07:04:31.807959"], ["updated_at", "2019-02-08 07:04:31.807959"]]
+  ↳ app/controllers/plans_controller.rb:50
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plans_controller.rb:50
+Redirected to http://127.0.0.1:3000/plans/13
+Completed 302 Found in 38ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/plans/13" for 127.0.0.1 at 2019-02-08 15:04:31 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:88
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:28
+  Rendering plans/show.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/plans/show.html.erb:10
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/plans/show.html.erb:11
+  Rendered plans/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `shuffle' for "Chicken Rice":String):
+    27: 
+    28: <h4> Total Calories: <%= calories %> </h4>
+    29: 
+    30: <button>Randomize <%= @plans.food.name.shuffle.first %> </button>
+    31: 
+    32: <%= link_to 'Edit', edit_plan_path(@plan) %> |
+    33: <%= link_to 'Back', profile_path %>
+  
+app/views/plans/show.html.erb:30:in `_app_views_plans_show_html_erb__1963278582382947439_70201245048680'
+Started GET "/plans/13" for 127.0.0.1 at 2019-02-08 15:05:09 +0800
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:88
+  [1m[36mCACHE Plan Load (0.0ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:28
+  Rendering plans/show.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/plans/show.html.erb:10
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/plans/show.html.erb:11
+  Rendered plans/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2019-02-08 15:05:11 +0800
+Processing by PlansController#profile as HTML
+  Rendering plans/profile.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/profile.html.erb:18
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/plans/profile.html.erb:26
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/plans/profile.html.erb:25
+  Rendered plans/profile.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.8ms)
+
+
