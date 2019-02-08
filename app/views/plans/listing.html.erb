@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <%= form_with scope: :plan, url: plans_path, local: true do |form| %>
 <h1>Plans</h1>
 
@@ -7,6 +8,7 @@
 
 <table>
   <thead>
+  		<th> Selection</th>
       <th>Breakfast</th>
       <th>Calories</th>
       <th>Price</th>
@@ -17,6 +19,7 @@
   <tbody>
   		<% @foods_b.each do |food| %>
       <tr>
+      	<td><%= form.radio_button :food_id, "#{food.id}" %> </td>
         <td><%= food.name %></td>
         <td><%= food.calories %></td>
         <td><%= food.price %> </td>
@@ -24,11 +27,12 @@
      <% end %>
   </tbody>
 </table>
-			<p><%= form.collection_select :food_id, @foods_b,:id, :name %></p>
+
 
 <table>
   <thead>
     <tr>
+    	<th> Selection</th>
       <th>Lunch</th>
       <th>Calories</th>
       <th>Price</th>
@@ -39,6 +43,7 @@
   <tbody>
   		<% @foods_l.each do |food| %>
       <tr>
+      	<td><%= form.radio_button :lunch_id, "#{food.id}" %></td>
         <td><%= food.name %></td>
         <td><%= food.calories %></td>
         <td><%= food.price %> </td>
@@ -46,11 +51,11 @@
       </tr>
   </tbody>
 </table>
-			<p><%= form.collection_select :lunch_id, @foods_l,:id, :name %></p>
 
 <table>
   <thead>
     <tr>
+    	<th> Selection</th>
       <th>Dinner</th>
       <th>Calories</th>
       <th>Price</th>
@@ -61,6 +66,7 @@
   <tbody>
   		<% @foods_d.each do |food| %>
       <tr>
+      	<td><%= form.radio_button :dinner_id, "#{food.id}" %></td>
         <td><%= food.name %></td>
         <td><%= food.calories %></td>
         <td><%= food.price %> </td>
@@ -68,7 +74,6 @@
      <% end %>
   </tbody>
 </table>
-		<p><%= form.collection_select :dinner_id, @foods_d,:id, :name %></p>
 
 	<p>
     <%= form.submit %>
