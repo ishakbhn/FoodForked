@@ -18,10 +18,15 @@
 
     <% lunch = plan.lunch_id.to_i - 1 %>
     <% dinner = plan.dinner_id.to_i - 1 %>
+    <% total = 0
+		total = @foods[dinner].price + @foods[lunch].price + plan.food.price %>
+
+		<% calories = 0
+		calories = @foods[dinner].calories + @foods[lunch].calories + plan.food.calories %>
 
       <tr>
         <td><%= plan.date %></td>
-        <td><%= calories %> cal %></td>
+        <td><%= calories %> cal</td>
         <td>$<%= total %></td>
       </tr>
 
