@@ -1,4 +1,5 @@
 class PlansController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
 
 
@@ -17,7 +18,8 @@ class PlansController < ApplicationController
   end
 
   def profile
-    @plans = Plan.all
+
+    @plans = Plan.order(sort_column + " " + sort_direction)
     @foods = Food.all
   end
 
@@ -91,4 +93,19 @@ class PlansController < ApplicationController
     def plan_params
       params.require(:plan).permit(:date, :breakfast_id, :lunch_id, :dinner_id, :food_id)
     end
+
+
+    def sortable_columns
+      ['date','breakfast_id','lunch_id','dinner_id']
+    end
+
+    def sort_column
+      Plan.column_names.include?(params[:sort]) ? params[:sort] : "date"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+
 end
+
