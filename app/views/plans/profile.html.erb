@@ -25,7 +25,7 @@
 		calories = @foods[dinner].calories + @foods[lunch].calories + plan.food.calories %>
 
       <tr>
-        <td><%= plan.date %></td>
+        <td><%=  link_to plan.date, plan %></td>
         <td><%= calories %> cal</td>
         <td>$<%= total %></td>
       </tr>
