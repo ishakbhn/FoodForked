@@ -23,6 +23,6 @@ calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calori
 
 <h4> Total Calories: <%= calories %> cal </h4>
 
-<%= link_to 'Edit', edit_plan_path(@plan) %>
+<%= link_to 'Edit', edit_plan_path(@plans) %>
 <%= link_to 'View', profile_path %>
 <td><%= link_to 'Delete', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

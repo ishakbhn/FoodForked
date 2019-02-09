@@ -19,7 +19,8 @@ class PlansController < ApplicationController
   end
 
   def profile
-    @plans = Plan.order(sort_column + " " + sort_direction)
+    # @plans = Plan.order(sort_column + " " + sort_direction)
+    @plans = Plan.where(user: current_user)
     @foods = Food.all
   end
 
@@ -45,7 +46,6 @@ class PlansController < ApplicationController
   # POST /plans
   # POST /plans.json
   def create
-    byebug
     @plan = Plan.new(plan_params)
     @plan.user = current_user
     respond_to do |format|
