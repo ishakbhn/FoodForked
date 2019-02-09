@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   helper_method :sort_column, :sort_direction
+  before_action :authenticate_user!, :except => [ :show, :index ]
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
 
 
@@ -15,12 +16,21 @@ class PlansController < ApplicationController
     @foods_b = Food.where(cuisine: params[:foods][:bf_id])
     @foods_l = Food.where(cuisine: params[:foods][:lch_id])
     @foods_d = Food.where(cuisine: params[:foods][:din_id])
+
+
   end
 
   def profile
 
     @plans = Plan.order(sort_column + " " + sort_direction)
     @foods = Food.all
+
+    if user_signed_in?
+      @user = current_user
+      @selected = @user.plan
+    else
+      @selected = []
+    end
   end
 
   # GET /plans/1
@@ -49,6 +59,8 @@ class PlansController < ApplicationController
 
     respond_to do |format|
       if @plan.save
+        @plan.user_id = current_user
+
         format.html { redirect_to profile_path, notice: 'Plan was successfully created.' }
         format.json { render :show, status: :created, location: @plan }
       else
