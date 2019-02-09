@@ -62,6 +62,8 @@ class PlansController < ApplicationController
   # PATCH/PUT /plans/1
   # PATCH/PUT /plans/1.json
   def update
+
+    @plan = Plan.find(params[:id])
     respond_to do |format|
       if @plan.update(plan_params)
         format.html { redirect_to @plan, notice: 'Plan was successfully updated.' }
