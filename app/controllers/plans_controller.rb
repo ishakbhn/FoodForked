@@ -1,19 +1,17 @@
 class PlansController < ApplicationController
   helper_method :sort_column, :sort_direction
-  before_action :authenticate_user!, :except => [ :show, :listing]
+  before_action :authenticate_user!, :except => [ :show, :listing, :index]
 
 
   # GET /plans
   # GET /plans.json
   def index
     @foods = Food.select(:cuisine).distinct
-
   end
 
   def listing
     @plans = Plan.all
     @foods = Food.all
-    byebug
     @foods_b = Food.where(cuisine: params[:foods][:bf_id])
     @foods_l = Food.where(cuisine: params[:foods][:lch_id])
     @foods_d = Food.where(cuisine: params[:foods][:din_id])
@@ -21,7 +19,6 @@ class PlansController < ApplicationController
   end
 
   def profile
-
     @plans = Plan.order(sort_column + " " + sort_direction)
     @foods = Food.all
   end
@@ -48,8 +45,9 @@ class PlansController < ApplicationController
   # POST /plans
   # POST /plans.json
   def create
+    byebug
     @plan = Plan.new(plan_params)
-
+    @plan.user = current_user
     respond_to do |format|
       if @plan.save
         format.html { redirect_to profile_path, notice: 'Plan was successfully created.' }
