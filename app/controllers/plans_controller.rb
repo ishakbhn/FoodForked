@@ -39,7 +39,7 @@ class PlansController < ApplicationController
 
   # GET /plans/1/edit
   def edit
-    @plans = Plan.find(params[:id])
+    @plan = Plan.find(params[:id])
     @foods = Food.all
   end
 
