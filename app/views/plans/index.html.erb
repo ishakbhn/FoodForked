@@ -1,24 +1,11 @@
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active pr-5" href="#">
-    	<% if user_signed_in? %>
-			<%= link_to 'Log out', destroy_user_session_url, method: :delete %>
-			<% else %>
-			<%= link_to 'Log in', new_user_session_url %>
-			<% end %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active px-5" href="#"><%= link_to 'Register', new_user_registration_url %></a>
-  </li>
-</ul>
-
-
-
 <div id="form-bg" class="text-center">
     <div class="text text-uppercase" id="align-text">Your one-stop meal planner</div>
 
-    Can’t think of what to eat today? <br>
-    Create your meal plan in seconds with FoodForked right now!<br>
+    <div id="indextext">
+
+        Can’t think of what to eat today? <br>
+        Create your meal plan in seconds with <span id="titlename"><span id="titlecolor">Food</span>Forked</span> <i>right now!</i><br>
+    </div>
 
     <button type="button" class="button mt-3" data-toggle="modal" data-target="#exampleModalCenter">Start</button>
 
@@ -52,7 +39,7 @@
                       </div>
 
           <div class="modal-footer" id="modal-index">
-            <button type="button" class="btn button"><%= form.submit('Submit') %></button>
+            <button type="button" class="btn button text-center"><%= form.submit('Submit') %></button>
 
             <% end %>
           </div>
