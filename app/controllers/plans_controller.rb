@@ -111,7 +111,7 @@ class PlansController < ApplicationController
     end
 
     def sortable_columns
-      ['date','breakfast_id','lunch_id','dinner_id']
+      ['date','calories','price']
     end
 
     def sort_column
