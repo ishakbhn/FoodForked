@@ -16,3 +16,33 @@
 
 @import "plans";
 @import "bootstrap";
+
+.home {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.home a {
+    text-decoration: none;
+    color: #353535;
+    position: relative;
+}
+
+.home a:hover {
+    border-bottom: 1px rgba(53, 53, 53, 0.5) solid;
+    transition: all .3s ease;
+}
+
+.homecolor {
+    color: #eca400;
+}
+
+.navbg {
+    background-color: white;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
