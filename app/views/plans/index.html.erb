@@ -1,24 +1,11 @@
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active pr-5" href="#">
-    	<% if user_signed_in? %>
-			<%= link_to 'Log out', destroy_user_session_url, method: :delete %>
-			<% else %>
-			<%= link_to 'Log in', new_user_session_url %>
-			<% end %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active px-5" href="#"><%= link_to 'Register', new_user_registration_url %></a>
-  </li>
-</ul>
-
-
-
 <div id="form-bg" class="text-center">
     <div class="text text-uppercase" id="align-text">Your one-stop meal planner</div>
 
-    Can’t think of what to eat today? <br>
-    Create your meal plan in seconds with FoodForked right now!<br>
+    <div id="indextext">
+
+        Can’t think of what to eat today? <br>
+        Create your meal plan in seconds with <span id="titlename"><span id="titlecolor">Food</span>Forked</span> <i>right now!</i><br>
+    </div>
 
     <button type="button" class="button mt-3" data-toggle="modal" data-target="#exampleModalCenter">Start</button>
 
@@ -36,7 +23,7 @@
                 <%= form_with scope: :foods, url: listing_path, local: true do |form| %>
                 <div class="container text-center" id="form-input">
 
-                      <div class="text">I want to eat:</div><br>
+                      <div class="text semibold">I want to eat:</div><br>
                     <div class="row">
                       <div class="col-sm">
                         <div class="text"><%= form.label :breakfast_id %> <br></div>

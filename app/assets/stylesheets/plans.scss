@@ -26,6 +26,8 @@
 
 #align-text {
     padding-top: 19%;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 #modal-index {
@@ -36,9 +38,34 @@
     color: #eca400;
 }
 
+.semibold {
+    font-weight: 600;
+}
+
 #form-bg {
+    margin: 0 auto;
     background-color: #f4f4f4;
     background-image: asset-url('index-bg.png');
     height: 600px;
-    margin-top: 12px;
+}
+
+#titlename {
+    font-family: 'Abril Fatface', cursive;
+}
+
+#titlecolor {
+    color: #eca400;
+}
+
+#indextext {
+    color: white;
+}
+
+input[type="submit"] {
+    border-radius: 5px;
+    padding: .5% 2%;
+    background-color: #db504a;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
