@@ -1,6 +1,11 @@
 <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active pr-5" href="#"><%= link_to 'Log in', new_user_session_url %></a>
+    <a class="nav-link active pr-5" href="#">
+    	<% if user_signed_in? %>
+			<%= link_to 'Log out', destroy_user_session_url, method: :delete %>
+			<% else %>
+			<%= link_to 'Log in', new_user_session_url %>
+			<% end %></a>
   </li>
   <li class="nav-item">
     <a class="nav-link active px-5" href="#"><%= link_to 'Register', new_user_registration_url %></a>
@@ -64,7 +69,3 @@
 
 
 </div>
-
-
-
-

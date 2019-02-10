@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
   helper_method :sort_column, :sort_direction
-  before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [ :show, :listing, :index]
 
 
   # GET /plans
@@ -18,8 +18,8 @@ class PlansController < ApplicationController
   end
 
   def profile
-
-    @plans = Plan.order(sort_column + " " + sort_direction)
+    # @plans = Plan.order(sort_column + " " + sort_direction)
+    @plans = Plan.where(user: current_user)
     @foods = Food.all
   end
 
@@ -38,7 +38,7 @@ class PlansController < ApplicationController
 
   # GET /plans/1/edit
   def edit
-    @plans = Plan.find(params[:id])
+    @plan = Plan.find(params[:id])
     @foods = Food.all
   end
 
@@ -46,7 +46,7 @@ class PlansController < ApplicationController
   # POST /plans.json
   def create
     @plan = Plan.new(plan_params)
-
+    @plan.user = current_user
     respond_to do |format|
       if @plan.save
         format.html { redirect_to profile_path, notice: 'Plan was successfully created.' }
@@ -61,6 +61,7 @@ class PlansController < ApplicationController
   # PATCH/PUT /plans/1
   # PATCH/PUT /plans/1.json
   def update
+    @plan = Plan.find(params[:id])
     respond_to do |format|
       if @plan.update(plan_params)
         format.html { redirect_to @plan, notice: 'Plan was successfully updated.' }
@@ -83,6 +84,21 @@ class PlansController < ApplicationController
     end
   end
 
+  def set_cookies
+    cookies[:current_listing]   = "Horst Meier"
+    cookies[:customer_number] = "1234567890"
+  end
+
+  def show_cookies
+    @user_name    = cookies[:user_name]
+    @customer_number = cookies[:customer_number]
+  end
+
+  def delete_cookies
+    cookies.delete :user_name
+    cookies.delete :customer_number
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_plan
@@ -93,7 +109,6 @@ class PlansController < ApplicationController
     def plan_params
       params.require(:plan).permit(:date, :breakfast_id, :lunch_id, :dinner_id, :food_id)
     end
-
 
     def sortable_columns
       ['date','breakfast_id','lunch_id','dinner_id']
@@ -108,4 +123,3 @@ class PlansController < ApplicationController
     end
 
 end
-
