@@ -70,3 +70,14 @@ body {
 .navmgn {
     margin-right: 70px;
 }
+
+nav a {
+    margin-right: 20px;
+    color: #353535;
+}
+
+nav a:hover {
+    color: #eca400;
+    transition: .5s;
+    text-decoration: none;
+}

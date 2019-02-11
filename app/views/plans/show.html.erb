@@ -1,26 +1,46 @@
-<p id="notice"><%= notice %></p>
+<h3 class="header"><span id="todaysdate">Date:</span> <%= @plans.date %></h3>
+<div id="icon">
+<%= link_to ('<i class="fa fa-eye"></i>').html_safe, profile_path %>
+<%= link_to ('<i class="fa fa-edit"></i>').html_safe, edit_plan_path(@plans) %>
+<span class="pr-4"><%= link_to ('<i class="fa fa-trash"></i>').html_safe, @plan, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+</div>
+    <p id="profilenotice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @plans.date %>
-</p>
-    <% lunch = @plans.lunch_id.to_i - 1%>
-    <% dinner = @plans.dinner_id.to_i - 1%>
-<p>
-  <div><strong>Breakfast:</strong><%= @plans.food.name %> <%= @plans.food.calories %> cal  $<%= @plans.food.price %></div>
-   <div><strong>Lunch:</strong><%= @foods[lunch].name %> <%= @foods[lunch].calories %> cal  $<%= @foods[lunch].price %></div>
-   <div><strong>Dinner:</strong><%= @foods[dinner].name %> <%= @foods[dinner].calories %> cal  $<%= @foods[dinner].price %> </div>
-</p>
+        <% lunch = @plans.lunch_id.to_i - 1%>
+        <% dinner = @plans.dinner_id.to_i - 1%>
+
+        <div class="d-flex justify-content-center text-center my-5">
+            <div class="card border-secondary mb-3 mx-5 w-50">
+              <div class="card-header semibold ft-20 text-uppercase">Breakfast</div>
+              <div class="card-body text-secondary">
+                <p class="card-text"> Selection: <span class="semibold"><%= @plans.food.name %></span> <br> Calories: <%= @plans.food.calories %> cal <br> Price: $<%= @plans.food.price %></p>
+              </div>
+            </div>
+
+            <div class="card border-secondary mb-3 mx-5 w-50">
+              <div class="card-header semibold ft-20 text-uppercase">Lunch</div>
+              <div class="card-body text-secondary">
+                <p class="card-text"> Selection: <span class="semibold"><%= @foods[lunch].name %></span> <br> Calories: <%= @foods[lunch].calories %> cal <br> Price: $<%= @foods[lunch].price %></p>
+              </div>
+            </div>
+
+            <div class="card border-secondary mb-3 mx-5 w-50">
+              <div class="card-header semibold ft-20 text-uppercase">Dinner</div>
+              <div class="card-body text-secondary">
+                <p class="card-text">Selection: <span class="semibold"><%= @foods[dinner].name %></span> <br> Calories: <%= @foods[dinner].calories %> cal <br> Price: $<%= @foods[dinner].price %></p>
+              </div>
+            </div>
+        </div>
+
 
 <% total = @foods[dinner].price + @foods[lunch].price + @plans.food.price %>
 
 <% calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calories %>
 
 
-<h4> Total Price: $<%= total %> </h4>
-
-<h4> Total Calories: <%= calories %> cal </h4>
-
-<%= link_to 'Edit', edit_plan_path(@plans) %>
-<%= link_to 'View', profile_path %>
-<td><%= link_to 'Delete', @plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div id="total">
+    <ul class="ft-20 text-center semibold mt-3">
+        <li>Total Price: $<%= total %> </li>
+        <li>Total Calories: <%= calories %> cal</li>
+    </ul>
+</div>
