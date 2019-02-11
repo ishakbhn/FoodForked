@@ -21,38 +21,32 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
 
+          <div class="modal-body">
                 <%= form_with scope: :foods, url: listing_path, local: true do |form| %>
                 <div class="container text-center" id="form-input">
+                    <div class="semibold ft-20 mt-3">I want to eat:</div><br>
+                        <div class="row">
+                          <div class="col-sm">
+                            <div class="text"><%= form.label :breakfast_id %> <br></div>
+                                <%= form.collection_select :bf_id, @foods, :cuisine, :cuisine %>
+                            </div>
+                          <div class="col-sm">
+                            <div class="text"><%= form.label :lunch_id %> <br></div>
+                                <%= form.collection_select :lch_id, @foods,:cuisine, :cuisine %>
+                            </div>
+                          <div class="col-sm">
+                            <div class="text"><%= form.label :dinner_id %> <br></div>
+                                <%= form.collection_select :din_id, @foods,:cuisine, :cuisine %>
+                          </div>
+             </div>
 
-                      <div class="text semibold">I want to eat:</div><br>
-                    <div class="row">
-                      <div class="col-sm">
-                        <div class="text"><%= form.label :breakfast_id %> <br></div>
-                        <%= form.collection_select :bf_id, @foods, :cuisine, :cuisine %>
-                      </div>
-                      <div class="col-sm">
-                        <div class="text"><%= form.label :lunch_id %> <br></div>
-                        <%= form.collection_select :lch_id, @foods,:cuisine, :cuisine %>
-                      </div>
-                      <div class="col-sm">
-                        <div class="text"><%= form.label :dinner_id %> <br></div>
-                        <%= form.collection_select :din_id, @foods,:cuisine, :cuisine %>
-                      </div>
-
-          <div class="modal-footer" id="modal-index">
-            <button type="button" class="btn button text-center"><%= form.submit('Submit') %></button>
-
+          <div >
+            <button type="button" class="btn button text-center mb-2" id="indexsubmitbtn"><%= form.submit('Submit') %></button>
             <% end %>
           </div>
 
-
-      </div>
+       </div>
     </div>
-
-
 </div>
-
-
 </div>
