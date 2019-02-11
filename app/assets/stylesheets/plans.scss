@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #353535;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  padding: 40px !important;
+}
+
 #form-input {
     background-color: white;
 }
@@ -38,14 +54,19 @@
     color: #eca400;
 }
 
+.ft-14  {
+    font-size: 14px;
+}
+
 .semibold {
     font-weight: 600;
 }
 
 #form-bg {
     margin: 0 auto;
-    background-color: #f4f4f4;
+    background-color: #444343;
     background-image: asset-url('index-bg.png');
+    background-size: cover;
     height: 600px;
 }
 
@@ -68,4 +89,171 @@ input[type="submit"] {
     border: none;
     color: white;
     cursor: pointer;
+}
+
+// button:hover {
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
+// button:hover input[type="submit"]{
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
+// input[type="submit"]:hover {
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
+#listingbg {
+    background-color: #FDF6E7;
+    margin-top: -16px;
+}
+
+.header {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    background-color: #eca400;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 0px !important;
+}
+
+// .header h3 {
+//     margin-bottom: 0px !important;
+// }
+
+.listingspace {
+    padding-left: 50px;
+}
+
+.listingsubhead {
+    color: #eca400;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    vertical-align: bottom;
+}
+
+#listingsubmit {
+    text-align: center;
+}
+
+#listingrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    height: 420px;
+}
+
+.hide {
+    visibility: hidden;
+    position: absolute;
+}
+
+// input[type=radio]:after {
+//     background-color: #eca400 !important;
+// }
+
+ input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+.selection{
+    margin-top: 20px;
+}
+
+#bf{
+    position: absolute;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    z-index: 2;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-inline-start: 0;
+    padding-top: 30px;
+}
+
+#bf li {
+    display: inline-block;
+}
+
+#todaysdate {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 0;
+}
+
+// .listingcenter {
+//     // background-color: #f9f9f9;
+//     padding:30px;
+// }
+
+#profilebg {
+    padding: 0 52px;
+}
+
+.profilebtn {
+    text-align: center;
+    width: 100%;
+}
+
+button a {
+    color: white;
+}
+
+#profilenotice {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+th a {
+    color: #eca400;
+}
+
+th a:hover {
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    color: #353535;
+}
+
+#profilebtn {
+    text-align: center;
 }
