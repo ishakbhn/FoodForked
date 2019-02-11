@@ -12,11 +12,9 @@
    <div><strong>Dinner:</strong><%= @foods[dinner].name %> <%= @foods[dinner].calories %> cal  $<%= @foods[dinner].price %> </div>
 </p>
 
-<% total = 0
-total = @foods[dinner].price + @foods[lunch].price + @plans.food.price %>
+<% total = @foods[dinner].price + @foods[lunch].price + @plans.food.price %>
 
-<% calories = 0
-calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calories %>
+<% calories = @foods[dinner].calories + @foods[lunch].calories + @plans.food.calories %>
 
 
 <h4> Total Price: $<%= total %> </h4>
