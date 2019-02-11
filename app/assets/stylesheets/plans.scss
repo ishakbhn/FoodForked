@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #353535;
+}
+
+
 #form-input {
     background-color: white;
 }
@@ -38,6 +46,10 @@
     color: #eca400;
 }
 
+.ft-12  {
+    font-size: 14px;
+}
+
 .semibold {
     font-weight: 600;
 }
@@ -68,4 +80,45 @@ input[type="submit"] {
     border: none;
     color: white;
     cursor: pointer;
+}
+
+#listingbg {
+    background-color: #f9f9f9;
+    margin-top: -16px;
+}
+
+.header {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    background-color: #eca400;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.listingspace {
+    padding-left: 50px;
+}
+
+.listingsubhead {
+    color: #eca400;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+#listingsubmit {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#listingrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.listingcenter {
+    // background-color: #f9f9f9;
+    padding:30px;
 }
