@@ -224,6 +224,40 @@ input[type="submit"] {
 //     padding:30px;
 // }
 
+#profilebg {
+    padding: 0 52px;
+}
+
+.profilebtn {
+    text-align: center;
+    width: 100%;
+}
+
+button a {
+    color: white;
+}
+
+#profilenotice {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+th a {
+    color: #eca400;
+}
+
+th a:hover {
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    color: #353535;
+}
+
+#profilebtn {
+    text-align: center;
+}
+
 #login-container {
     width: 50%;
     margin: 0 auto;

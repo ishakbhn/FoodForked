@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 
 <h1>Plans</h1>
@@ -33,3 +34,42 @@
 </table>
 
 <br>
+=======
+<h3 class="header text-uppercase">Your plans</h3>
+    <p id="profilenotice"><%= notice %></p>
+        <div id="profilebg">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <th scope="col" class="pl-5">Date</th>
+                      <th scope="col" class="text-center">Calories</th>
+                      <th scope="col" class="text-center">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% @plans.each do |plan| %>
+                    <% lunch = plan.lunch_id.to_i - 1 %>
+                    <% dinner = plan.dinner_id.to_i - 1 %>
+                    <% total = 0
+                		total = @foods[dinner].price + @foods[lunch].price + plan.food.price %>
+
+                	<% calories = 0
+                		calories = @foods[dinner].calories + @foods[lunch].calories + plan.food.calories %>
+
+                        <tr>
+                          <th scope="row" class="pl-5"><%=  link_to plan.date, plan %></th>
+                          <td class="text-center"><%= calories %> cal</td>
+                          <td class="text-center">$<%= total %></td>
+                        </tr>
+
+                    <% end %>
+                </tbody>
+            </table>
+
+
+            <div class="justify-content-center mx-auto" id="profilebtn"><button type="button" class="btn button mx-auto "><%= link_to 'New Plan', new_plan_path %></button></div>
+
+        </div>
+>>>>>>> master
