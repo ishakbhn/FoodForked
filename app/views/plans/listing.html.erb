@@ -1,17 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div id="listingbg" class="col-container">
+
+<p id="notice"><% notice %></p>
 
 
 <%= form_with scope: :plan, url: plans_path, local: true do |form| %>
-<h1>Plans</h1>
+<h3 class="header"><span id="todaysdate">Today's date:</span><%= Time.now.strftime("%d-%m-%Y") %></h3>
 
+<div class="hide">
 <%= form.date_select :date %>
+</div>
 
-<table>
+<div class="container-fluid" id="listingrow">
+
+    <ul id="bf">
+        <li>BREAKFAST</li>
+        <li>LUNCH</li>
+        <li>DINNER</li>
+    </ul>
+
+
+
+<table class="col" style="background:#f9f9f9">
   <thead>
   	  <th></th>
-      <th>Breakfast</th>
-      <th>Calories</th>
-      <th>Price</th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
+      <th class="listingspace listingsubhead">Calories</th>
+      <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,22 +34,22 @@
   		<% @foods_b.each do |food| %>
       <tr>
       	<td><%= form.radio_button :food_id, "#{food.id}" %> </td>
-        <td><%= food.name %></td>
-        <td><%= food.calories %></td>
-        <td><%= food.price %> </td>
+        <td class="pl-3 ft-14"><%= food.name %></td>
+        <td class="listingspace ft-14 text-center"><%= food.calories %></td>
+        <td class="listingspace ft-14 text-center">$<%= food.price %> </td>
       </tr>
      <% end %>
   </tbody>
 </table>
 
 
-<table>
+<table class="col" style="background:#fefefe">
   <thead>
     <tr>
-      <th></th>
-      <th>Lunch</th>
-      <th>Calories</th>
-      <th>Price</th>
+        <th></th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
+      <th class="listingspace listingsubhead">Calories</th>
+      <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -44,21 +58,21 @@
   		<% @foods_l.each do |food| %>
       <tr>
       	<td><%= form.radio_button :lunch_id, "#{food.id}" %></td>
-        <td><%= food.name %></td>
-        <td><%= food.calories %></td>
-        <td><%= food.price %> </td>
+        <td class="pl-3 ft-14"><%= food.name %></td>
+        <td class="listingspace ft-14 text-center"><%= food.calories %></td>
+        <td class="listingspace ft-14 text-center">$<%= food.price %> </td>
         <% end %>
       </tr>
   </tbody>
 </table>
 
-<table>
+<table class="col" style="background:#f9f9f9">
   <thead>
     <tr>
     	<th></th>
-      <th>Dinner</th>
-      <th>Calories</th>
-      <th>Price</th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
+      <th class="listingspace listingsubhead">Calories</th>
+      <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -67,15 +81,17 @@
   		<% @foods_d.each do |food| %>
       <tr>
       	<td><%= form.radio_button :dinner_id, "#{food.id}" %></td>
-        <td><%= food.name %></td>
-        <td><%= food.calories %></td>
-        <td><%= food.price %> </td>
+        <td class="pl-3 ft-14"><%= food.name %></td>
+        <td class="listingspace ft-14 text-center"><%= food.calories %></td>
+        <td class="listingspace ft-14 text-center">$<%= food.price %> </td>
       </tr>
      <% end %>
   </tbody>
 </table>
+</div>
 
-	<p>
-    <%= form.submit %>
-  </p>
+    <div id="listingsubmit" class="py-4"><%= form.submit %></div>
+
 <% end %>
+
+</div>
