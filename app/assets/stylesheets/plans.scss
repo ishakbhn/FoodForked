@@ -40,6 +40,11 @@ body {
     cursor: pointer;
 }
 
+.button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 #align-text {
     padding-top: 19%;
     font-size: 22px;
@@ -239,8 +244,8 @@ button a {
 
 #profilenotice {
     font-size: 12px;
-    text-align: center;
     margin-top: 18px;
+    margin-left:47px;
 }
 
 th a {
@@ -264,7 +269,7 @@ th a:hover {
 }
 
 #indexsubmitbtn {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 #login-container {
     width: 50%;
@@ -274,4 +279,64 @@ th a:hover {
 #signup-container {
     width: 50%;
     margin: 0 auto;
+}
+
+#total ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FDF6E7;
+    padding: 20px;
+    color: #353535;
+}
+
+#total li {
+    list-style-type: none;
+}
+
+#icon {
+    font-size: 15px;
+    float: right;
+    padding-top: 15px;
+}
+
+#icon a {
+    color: #353535;
+    padding-right: 25px;
+}
+
+#icon a:hover {
+    color: #eca400;
+    transition: .3s;
+}
+
+#editform {
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 60px;
+    justify-content: space-around;
+}
+
+#editform select {
+    float: right;
+    margin-left: 10px;
+}
+
+#editicon {
+    position: absolute;
+    right: 30px;
+    top: 95px;
+}
+
+#editicon a {
+    color: #353535;
+    padding-right: 25px;
+}
+
+#editicon a:hover {
+    color: #AC7800;
+    transition: .3s;
+}
+
+#datewrap {
+
 }

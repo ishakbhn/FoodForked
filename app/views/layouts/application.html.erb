@@ -25,16 +25,16 @@
 
     <ul class="nav">
 
-        <li class="nav-item">
+        <li class="nav-item text-center">
         	<% if user_signed_in? %>
-        		<i class="fa fa-user"></i>
+        		<i class="fa fa-user-circle-o"></i>
         			<%= current_user.email%>
         		<a class="nav navmgn" href="#">
-        			<%= link_to 'My Profile', profile_url, method: :get %>
+        			<%= link_to 'My Plans', profile_url, method: :get %>
           	  <%= link_to 'Log out', destroy_user_session_url, method: :delete %> </a>
 					<% else  %>
-								<a class="nav navmgn" href="#"> <%= link_to 'Log in', new_user_session_url, method: :get%>
-								 <%= link_to 'Register', new_user_registration_url, method: :get%> </a>
+						<a class="nav navmgn" href="#"> <%= link_to 'Log in', new_user_session_url, method: :get%>
+						<%= link_to 'Register', new_user_registration_url, method: :get%> </a>
 					<% end %>
         </li>
     </ul>
