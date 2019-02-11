@@ -4,7 +4,7 @@
 
 
 <%= form_with scope: :plan, url: plans_path, local: true do |form| %>
-<h3 class="header"><%= Time.now.strftime("%d-%m-%Y") %></h3>
+<h3 class="header"><span id="todaysdate">Today's date:</span><%= Time.now.strftime("%d-%m-%Y") %></h3>
 
 <div class="hide">
 <%= form.date_select :date %>
@@ -12,13 +12,18 @@
 
 <div class="container-fluid" id="listingrow">
 
+    <ul id="bf">
+        <li>BREAKFAST</li>
+        <li>LUNCH</li>
+        <li>DINNER</li>
+    </ul>
+
+
 
 <table class="col" style="background:#f9f9f9">
   <thead>
   	  <th></th>
-      <th class="pl-3 semibold"><span class="listingsets">BREAKFAST</span>
-        <span class="selection listingsubhead">Selection</span>
-      </th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
       <th class="listingspace listingsubhead">Calories</th>
       <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>
@@ -41,10 +46,8 @@
 <table class="col" style="background:#fefefe">
   <thead>
     <tr>
-      <th></th>
-      <th class="pl-3 semibold"><span class="listingsets">LUNCH</span>
-        <span class="selection listingsubhead">Selection</span>
-      </th>
+        <th></th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
       <th class="listingspace listingsubhead">Calories</th>
       <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>
@@ -67,9 +70,7 @@
   <thead>
     <tr>
     	<th></th>
-      <th class="pl-3 semibold"><span class="listingsets">DINNER</span>
-        <span class="selection listingsubhead">Selection</span>
-      </th>
+      <th class="pl-3 pt-5 listingsubhead">Selection</th>
       <th class="listingspace listingsubhead">Calories</th>
       <th class="listingspace listingsubhead">Price</th>
       <th colspan="3"></th>

@@ -193,11 +193,31 @@ input[type="submit"] {
     margin-top: 20px;
 }
 
-.listingsets {
+#bf{
+    position: absolute;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
     font-size: 20px;
+    display: flex;
+    z-index: 2;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-inline-start: 0;
+    padding-top: 30px;
+}
+
+#bf li {
+    display: inline-block;
+}
+
+#todaysdate {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 0;
 }
 
 // .listingcenter {
 //     // background-color: #f9f9f9;
 //     padding:30px;
-// }
