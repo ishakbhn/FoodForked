@@ -33,7 +33,9 @@
         			<%= link_to 'My Profile', profile_url, method: :get %>
           	  <%= link_to 'Log out', destroy_user_session_url, method: :delete %> </a>
 					<% else  %>
-								<a class="nav navmgn" href="#"> <%= link_to 'Log in', new_user_session_url, method: :get%> </a>
+								<a class="nav navmgn" href="#"> <%= link_to 'Log in', new_user_session_url, method: :get%>
+								 <%= link_to 'Register', new_user_registration_url, method: :get%> </a>
+
 					<% end %>
         </li>
     </ul>
