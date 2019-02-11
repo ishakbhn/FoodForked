@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
   helper_method :sort_column, :sort_direction
-  before_action :authenticate_user!, :except => [ :show, :listing, :index]
+  before_action :authenticate_user!, :except => [ :show, :index]
 
 
   # GET /plans
@@ -18,7 +18,6 @@ class PlansController < ApplicationController
   end
 
   def profile
-    # @plans = Plan.order(sort_column + " " + sort_direction)
     @plans = Plan.where(user: current_user)
     @foods = Food.all
   end
