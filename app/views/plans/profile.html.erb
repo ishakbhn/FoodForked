@@ -6,11 +6,6 @@
   <thead>
     <tr>
 
-      <th><%= sortable "date" %></th>
-      <th><%= sortable "breakfast" %></th>
-      <th><%= sortable "lunch" %></th>
-      <th><%= sortable "dinner" %></th>
-
       <th>Date</th>
       <th>Calories</th>
       <th>Price</th>
@@ -24,11 +19,8 @@
 
     <% lunch = plan.lunch_id.to_i - 1 %>
     <% dinner = plan.dinner_id.to_i - 1 %>
-    <% total = 0
-		total = @foods[dinner].price + @foods[lunch].price + plan.food.price %>
-
-		<% calories = 0
-		calories = @foods[dinner].calories + @foods[lunch].calories + plan.food.calories %>
+    <% total = @foods[dinner].price + @foods[lunch].price + plan.food.price %>
+		<% calories = @foods[dinner].calories + @foods[lunch].calories + plan.food.calories %>
 
       <tr>
         <td><%=  link_to plan.date, plan %></td>
