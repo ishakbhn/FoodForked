@@ -30,6 +30,7 @@
     position: relative;
 }
 
+<<<<<<< HEAD
 .home a:after {
     content: '';
     position: absolute;
@@ -54,19 +55,32 @@
 //     transition: all .3s ease;
 // }
 
+=======
+.home a:hover {
+    border-bottom: 1px rgba(53, 53, 53, 0.5) solid;
+    transition: all .3s ease;
+}
+
+>>>>>>> master
 .homecolor {
     color: #eca400;
 }
 
 .navbg {
     background-color: white;
+<<<<<<< HEAD
     box-shadow: 0px 2px rgba(53,53, 53, 0.2);
+=======
+>>>>>>> master
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+<<<<<<< HEAD
 }
 
 .navmgn {
     margin-right: 70px;
+=======
+>>>>>>> master
 }
