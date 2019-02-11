@@ -9,6 +9,14 @@ body {
     color: #353535;
 }
 
+.col-container {
+  display: table;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  padding: 40px !important;
+}
 
 #form-input {
     background-color: white;
@@ -46,7 +54,7 @@ body {
     color: #eca400;
 }
 
-.ft-12  {
+.ft-14  {
     font-size: 14px;
 }
 
@@ -82,8 +90,26 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+// button:hover {
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
+// button:hover input[type="submit"]{
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
+// input[type="submit"]:hover {
+//     // box-shadow: 0 0 25px -5px #782C29;
+//     background-color:red;
+//     transition: all .2s linear;
+// }
+
 #listingbg {
-    background-color: #f9f9f9;
+    background-color: #FDF6E7;
     margin-top: -16px;
 }
 
@@ -94,7 +120,12 @@ input[type="submit"] {
     padding: 10px;
     text-align: center;
     letter-spacing: 1px;
+    margin-bottom: 0px !important;
 }
+
+// .header h3 {
+//     margin-bottom: 0px !important;
+// }
 
 .listingspace {
     padding-left: 50px;
@@ -104,11 +135,11 @@ input[type="submit"] {
     color: #eca400;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    vertical-align: bottom;
 }
 
 #listingsubmit {
     text-align: center;
-    padding-bottom: 40px;
 }
 
 #listingrow {
@@ -116,9 +147,57 @@ input[type="submit"] {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    height: 420px;
 }
 
-.listingcenter {
-    // background-color: #f9f9f9;
-    padding:30px;
+.hide {
+    visibility: hidden;
+    position: absolute;
 }
+
+// input[type=radio]:after {
+//     background-color: #eca400 !important;
+// }
+
+ input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+.selection{
+    margin-top: 20px;
+}
+
+.listingsets {
+    font-size: 20px;
+}
+
+// .listingcenter {
+//     // background-color: #f9f9f9;
+//     padding:30px;
+// }
